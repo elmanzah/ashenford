@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ashenford International — Turnkey FF&amp;E Procurement for Hospitality &amp; Workforce Housing</title>
+  <meta name="description" content="Ashenford International delivers end-to-end FF&E procurement, logistics, and installation for hotels, resorts, and workforce housing — one partner, one process, from concept to completion.">
+
+  <!-- ============================================================
+       SOCIAL & SEO META — Open Graph / Twitter
+       Controls link previews on LinkedIn, iMessage, WhatsApp, Slack.
+       social-card.png must be a 1200×630 image in the same repo.
+       ============================================================ -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ashenford International">
+  <meta property="og:title" content="Ashenford International — Turnkey FF&E Procurement">
+  <meta property="og:description" content="One partner. One process. Seamless execution. End-to-end FF&E sourcing, logistics, and installation for hospitality and workforce housing.">
+  <meta property="og:image" content="https://ashenfordinternational.com/social-card.png">
+  <meta property="og:url" content="https://ashenfordinternational.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ashenford International — Turnkey FF&E Procurement">
+  <meta name="twitter:description" content="One partner. One process. Seamless execution. End-to-end FF&E for hospitality and workforce housing.">
+  <meta name="twitter:image" content="https://ashenfordinternational.com/social-card.png">
+
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
+
+  <!-- ============================================================
+       GOOGLE ANALYTICS (GA4) — Global Site Tag
+       Replace G-XXXXXXXXXX with your Measurement ID.
+       Do NOT delete these two script blocks when editing this file.
+       ============================================================ -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Archivo:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================
+       ASHENFORD INTERNATIONAL — DESIGN TOKENS
+       ========================================================== */
+    :root{
+      --ink:        #0F141C;   /* midnight ground          */
+      --ink-2:      #141B26;   /* raised panel             */
+      --ink-3:      #1B2432;   /* card / field surface     */
+      --hairline:   #2A3547;   /* rules & borders          */
+      --bone:       #EDE8DD;   /* primary text             */
+      --mist:       #97A1B1;   /* secondary text           */
+      --champagne:  #C6A566;   /* brand accent             */
+      --champagne-2:#E3CFA0;   /* accent highlight         */
+      --font-display:'Marcellus', Georgia, serif;
+      --font-body:  'Archivo', -apple-system, 'Segoe UI', sans-serif;
+      --measure: 62ch;
+      --pad: clamp(1.25rem, 4vw, 3rem);
+    }
+
+    *{ margin:0; padding:0; box-sizing:border-box; }
+    html{ scroll-behavior:smooth; scroll-padding-top:5.5rem; }
+    @media (prefers-reduced-motion: reduce){
+      html{ scroll-behavior:auto; }
+      *, *::before, *::after{ animation:none !important; transition:none !important; }
+    }
+
+    body{
+      background:var(--ink);
+      color:var(--bone);
+      font-family:var(--font-body);
+      font-weight:300;
+      font-size:1.0625rem;
+      line-height:1.7;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    ::selection{ background:var(--champagne); color:var(--ink); }
+
+    h1,h2,h3{ font-family:var(--font-display); font-weight:400; line-height:1.15; letter-spacing:.01em; }
+    a{ color:var(--champagne-2); text-decoration:none; }
+    a:focus-visible, button:focus-visible, input:focus-visible,
+    select:focus-visible, textarea:focus-visible{
+      outline:2px solid var(--champagne); outline-offset:3px;
+    }
+    img, svg{ display:block; }
+
+    .wrap{ max-width:1160px; margin-inline:auto; padding-inline:var(--pad); }
+
+    /* Eyebrow label system */
+    .eyebrow{
+      display:flex; align-items:center; gap:.75rem;
+      font-size:.72rem; font-weight:500; letter-spacing:.32em;
+      text-transform:uppercase; color:var(--champagne);
+      margin-bottom:1.25rem;
+    }
+    .eyebrow::before{ content:""; width:2.25rem; height:1px; background:var(--champagne); opacity:.7; }
+
+    /* ==========================================================
+       NAVIGATION
+       ========================================================== */
+    header{
+      position:sticky; top:0; z-index:50;
+      background:rgba(15,20,28,.88);
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--hairline);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:1.5rem; padding-block:.9rem;
+    }
+    .brand{ display:flex; align-items:center; gap:.85rem; color:var(--bone); }
+    .brand svg{ width:44px; height:44px; flex:none; }
+    .brand-name{
+      font-family:var(--font-display); font-size:1.15rem; letter-spacing:.14em;
+      text-transform:uppercase; line-height:1.1; color:var(--bone);
+    }
+    .brand-name small{
+      display:block; font-family:var(--font-body); font-weight:400;
+      font-size:.58rem; letter-spacing:.44em; color:var(--champagne);
+      text-transform:uppercase; margin-top:.2rem;
+    }
+    .nav-links{ display:flex; align-items:center; gap:2rem; list-style:none; }
+    .nav-links a{
+      color:var(--mist); font-size:.88rem; font-weight:400; letter-spacing:.04em;
+      transition:color .2s ease;
+    }
+    .nav-links a:hover{ color:var(--bone); }
+
+    .btn{
+      display:inline-block; padding:.8rem 1.7rem;
+      font-family:var(--font-body); font-size:.85rem; font-weight:500;
+      letter-spacing:.12em; text-transform:uppercase;
+      color:var(--ink); background:var(--champagne);
+      border:1px solid var(--champagne); border-radius:2px;
+      cursor:pointer; transition:background .2s ease, color .2s ease;
+    }
+    .btn:hover{ background:var(--champagne-2); border-color:var(--champagne-2); }
+    .btn-ghost{
+      background:transparent; color:var(--champagne-2);
+      border:1px solid var(--champagne);
+    }
+    .btn-ghost:hover{ background:rgba(198,165,102,.12); color:var(--champagne-2); }
+
+    .nav-toggle{
+      display:none; background:none; border:1px solid var(--hairline);
+      border-radius:2px; padding:.5rem .65rem; cursor:pointer;
+    }
+    .nav-toggle span{
+      display:block; width:20px; height:2px; background:var(--bone); margin:4px 0;
+    }
+
+    @media (max-width: 860px){
+      .nav-toggle{ display:block; }
+      .nav-links{
+        position:absolute; top:100%; left:0; right:0;
+        flex-direction:column; align-items:flex-start; gap:0;
+        background:var(--ink-2); border-bottom:1px solid var(--hairline);
+        padding:0 var(--pad);
+        max-height:0; overflow:hidden; transition:max-height .3s ease;
+      }
+      .nav-links.open{ max-height:420px; padding-block:1rem; }
+      .nav-links li{ width:100%; }
+      .nav-links a{ display:block; padding:.8rem 0; }
+      .nav-cta-desktop{ display:none; }
+    }
+
+    /* ==========================================================
+       HERO
+       ========================================================== */
+    .hero{
+      position:relative; overflow:hidden;
+      padding-block:clamp(5rem, 12vw, 9.5rem) clamp(4rem, 9vw, 7rem);
+      background:
+        radial-gradient(1100px 520px at 82% -10%, rgba(198,165,102,.10), transparent 60%),
+        linear-gradient(180deg, var(--ink-2), var(--ink) 70%);
+    }
+    .hero-mark{
+      position:absolute; right:-6%; top:50%; transform:translateY(-50%);
+      width:min(560px, 55vw); height:auto; opacity:.05; pointer-events:none;
+    }
+    .hero-inner{ position:relative; max-width:760px; }
+    .hero h1{
+      font-size:clamp(2.3rem, 5.2vw, 3.9rem);
+      color:var(--bone); margin-bottom:1.5rem;
+    }
+    .hero h1 em{ font-style:normal; color:var(--champagne-2); }
+    .hero p.lede{
+      font-size:clamp(1.05rem, 1.6vw, 1.25rem); color:var(--mist);
+      max-width:56ch; margin-bottom:2.5rem;
+    }
+    .hero-ctas{ display:flex; flex-wrap:wrap; gap:1rem; }
+
+    /* Market-signal strip */
+    .signals{
+      border-top:1px solid var(--hairline);
+      border-bottom:1px solid var(--hairline);
+      background:var(--ink-2);
+    }
+    .signals-inner{
+      display:grid; grid-template-columns:repeat(4, 1fr);
+      gap:1px; background:var(--hairline);
+    }
+    .signal{ background:var(--ink-2); padding:1.9rem 1.6rem; }
+    .signal strong{
+      display:block; font-family:var(--font-display);
+      font-size:clamp(1.6rem, 2.6vw, 2.15rem); color:var(--champagne-2);
+      margin-bottom:.35rem;
+    }
+    .signal span{ font-size:.85rem; color:var(--mist); line-height:1.5; display:block; }
+    .signals-note{
+      font-size:.72rem; letter-spacing:.18em; text-transform:uppercase;
+      color:var(--mist); padding:.85rem var(--pad); text-align:right;
+      border-top:1px solid var(--hairline);
+    }
+    @media (max-width: 860px){ .signals-inner{ grid-template-columns:repeat(2, 1fr); } }
+    @media (max-width: 460px){ .signals-inner{ grid-template-columns:1fr; } }
+
+    /* ==========================================================
+       SECTIONS — shared
+       ========================================================== */
+    section{ padding-block:clamp(4rem, 9vw, 7.5rem); }
+    .section-head{ max-width:720px; margin-bottom:clamp(2.5rem, 5vw, 4rem); }
+    .section-head h2{ font-size:clamp(1.9rem, 3.6vw, 2.7rem); margin-bottom:1.1rem; }
+    .section-head p{ color:var(--mist); max-width:var(--measure); }
+
+    /* ==========================================================
+       MARKETS
+       ========================================================== */
+    .markets-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; }
+    .market{
+      position:relative; background:var(--ink-2);
+      border:1px solid var(--hairline); border-radius:3px;
+      padding:2.5rem 2.25rem; overflow:hidden;
+    }
+    .market::after{
+      content:""; position:absolute; inset-inline:0; top:0; height:2px;
+      background:linear-gradient(90deg, var(--champagne), transparent 70%);
+    }
+    .market h3{ font-size:1.45rem; margin-bottom:1rem; color:var(--bone); }
+    .market p{ color:var(--mist); margin-bottom:1.35rem; }
+    .market ul{ list-style:none; }
+    .market li{
+      padding:.55rem 0 .55rem 1.4rem; position:relative;
+      color:var(--bone); font-size:.95rem; border-top:1px solid var(--hairline);
+    }
+    .market li::before{
+      content:""; position:absolute; left:0; top:1.15rem;
+      width:.55rem; height:.55rem; border:1px solid var(--champagne);
+      transform:rotate(45deg);
+    }
+    @media (max-width: 860px){ .markets-grid{ grid-template-columns:1fr; } }
+
+    .thesis{
+      margin-top:2.75rem; padding:2rem 2.25rem;
+      border-left:2px solid var(--champagne);
+      background:linear-gradient(90deg, rgba(198,165,102,.07), transparent 65%);
+      font-family:var(--font-display); font-size:clamp(1.15rem, 2vw, 1.4rem);
+      color:var(--bone); max-width:56ch;
+    }
+
+    /* ==========================================================
+       SERVICES — the project lifecycle
+       ========================================================== */
+    .services{ background:var(--ink-2); border-block:1px solid var(--hairline); }
+    .lifecycle{ list-style:none; counter-reset:svc; }
+    .lifecycle li{
+      counter-increment:svc;
+      display:grid; grid-template-columns:5.5rem 1fr; gap:1.75rem;
+      padding-block:2.1rem; border-top:1px solid var(--hairline);
+    }
+    .lifecycle li:last-child{ border-bottom:1px solid var(--hairline); }
+    .lifecycle .num{
+      font-family:var(--font-display); font-size:1.05rem; color:var(--champagne);
+      letter-spacing:.08em; padding-top:.2rem;
+    }
+    .lifecycle .num::before{ content:counter(svc, decimal-leading-zero); font-size:1.65rem; display:block; }
+    .lifecycle .num::after{ content:"/ 07"; font-size:.75rem; color:var(--mist); }
+    .lifecycle h3{ font-size:1.3rem; margin-bottom:.55rem; }
+    .lifecycle p{ color:var(--mist); max-width:66ch; }
+    @media (max-width: 640px){
+      .lifecycle li{ grid-template-columns:1fr; gap:.6rem; }
+    }
+
+    /* ==========================================================
+       ADVANTAGE
+       ========================================================== */
+    .adv-grid{ display:grid; grid-template-columns:repeat(4, 1fr); gap:1.5rem; }
+    .adv{
+      background:var(--ink-2); border:1px solid var(--hairline); border-radius:3px;
+      padding:2rem 1.75rem;
+    }
+    .adv svg{ width:34px; height:34px; margin-bottom:1.15rem; }
+    .adv h3{ font-size:1.15rem; margin-bottom:.6rem; }
+    .adv p{ font-size:.92rem; color:var(--mist); }
+    @media (max-width: 1020px){ .adv-grid{ grid-template-columns:repeat(2, 1fr); } }
+    @media (max-width: 560px){ .adv-grid{ grid-template-columns:1fr; } }
+
+    /* ==========================================================
+       CONTACT
+       ========================================================== */
+    .contact{ background:
+        radial-gradient(900px 480px at 12% 0%, rgba(198,165,102,.08), transparent 60%),
+        var(--ink-2);
+      border-top:1px solid var(--hairline);
+    }
+    .contact-grid{
+      display:grid; grid-template-columns:1fr 1.35fr; gap:clamp(2.5rem, 6vw, 5rem);
+      align-items:start;
+    }
+    .contact-side h2{ font-size:clamp(1.9rem, 3.4vw, 2.6rem); margin-bottom:1.1rem; }
+    .contact-side p{ color:var(--mist); margin-bottom:2rem; max-width:44ch; }
+    .contact-side .direct{
+      border-top:1px solid var(--hairline); padding-top:1.5rem;
+      font-size:.95rem; color:var(--mist);
+    }
+    .contact-side .direct a{ color:var(--champagne-2); }
+
+    form{ display:grid; grid-template-columns:1fr 1fr; gap:1.15rem; }
+    .field{ display:flex; flex-direction:column; gap:.45rem; }
+    .field.full{ grid-column:1 / -1; }
+    label{
+      font-size:.72rem; font-weight:500; letter-spacing:.2em;
+      text-transform:uppercase; color:var(--mist);
+    }
+    input, select, textarea{
+      width:100%; padding:.85rem 1rem;
+      background:var(--ink-3); border:1px solid var(--hairline); border-radius:2px;
+      color:var(--bone); font-family:var(--font-body); font-size:.98rem;
+      transition:border-color .2s ease;
+    }
+    input::placeholder, textarea::placeholder{ color:#5D6878; }
+    input:focus, select:focus, textarea:focus{ border-color:var(--champagne); }
+    select{
+      appearance:none; -webkit-appearance:none;
+      background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' fill='none' stroke='%23C6A566' stroke-width='1.5'/></svg>");
+      background-repeat:no-repeat; background-position:right 1rem center;
+      padding-right:2.6rem; cursor:pointer;
+    }
+    select:invalid{ color:#5D6878; }
+    textarea{ min-height:8.5rem; resize:vertical; }
+
+    /* Honeypot — hidden from humans, visible to bots */
+    .hp-field{
+      position:absolute !important; left:-9999px !important;
+      width:1px; height:1px; overflow:hidden; opacity:0;
+    }
+
+    .form-foot{ grid-column:1 / -1; display:flex; align-items:center; gap:1.25rem; flex-wrap:wrap; }
+    .form-status{ font-size:.92rem; color:var(--champagne-2); min-height:1.4em; }
+    @media (max-width: 900px){
+      .contact-grid{ grid-template-columns:1fr; }
+      form{ grid-template-columns:1fr; }
+    }
+
+    /* ==========================================================
+       FOOTER
+       ========================================================== */
+    footer{ border-top:1px solid var(--hairline); padding-block:3rem 2.25rem; background:var(--ink); }
+    .foot-grid{
+      display:flex; justify-content:space-between; align-items:flex-start;
+      gap:2rem; flex-wrap:wrap; margin-bottom:2.25rem;
+    }
+    .foot-brand{ display:flex; align-items:center; gap:.8rem; }
+    .foot-brand svg{ width:36px; height:36px; }
+    .foot-links{ display:flex; gap:2rem; list-style:none; flex-wrap:wrap; }
+    .foot-links a{ color:var(--mist); font-size:.88rem; transition:color .2s ease; }
+    .foot-links a:hover{ color:var(--bone); }
+    .foot-legal{
+      display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap;
+      border-top:1px solid var(--hairline); padding-top:1.5rem;
+      font-size:.8rem; color:#5D6878;
+    }
+    .foot-legal a{ color:#7C8698; }
+    .foot-legal a:hover{ color:var(--bone); }
+
+    /* Scroll reveal */
+    .reveal{ opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
+    .reveal.in{ opacity:1; transform:none; }
+    @media (prefers-reduced-motion: reduce){
+      .reveal{ opacity:1; transform:none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       BRAND MARK — inline SVG, defined once, reused via <use>
+       Keystone lozenge enclosing an interlocked A/I monogram.
+       ============================================================ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="ai-mark" viewBox="0 0 64 64">
+        <!-- keystone lozenge frame -->
+        <path d="M32 3 L61 32 L32 61 L3 32 Z" fill="none" stroke="#C6A566" stroke-width="1.6"/>
+        <path d="M32 9 L55 32 L32 55 L9 32 Z" fill="none" stroke="#C6A566" stroke-width=".7" opacity=".45"/>
+        <!-- A strokes -->
+        <path d="M18.5 45 L30.2 17" fill="none" stroke="#EDE8DD" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M33.8 17 L45.5 45" fill="none" stroke="#EDE8DD" stroke-width="2.2" stroke-linecap="round"/>
+        <!-- I stem interlocking as the apex of the A -->
+        <path d="M32 13 L32 33" fill="none" stroke="#C6A566" stroke-width="2.2" stroke-linecap="round"/>
+        <!-- shared crossbar: the A's bar and the I's foot serif -->
+        <path d="M23.5 36 L40.5 36" fill="none" stroke="#C6A566" stroke-width="1.8" stroke-linecap="round"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ============================================================ NAV -->
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Ashenford International — home">
+        <svg role="img" aria-hidden="true"><use href="#ai-mark"/></svg>
+        <span class="brand-name">Ashenford<small>International</small></span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#markets">Markets</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#advantage">Why Ashenford</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="btn nav-cta-desktop" href="#contact">Request Consultation</a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ========================================================== HERO -->
+    <section class="hero" aria-label="Introduction">
+      <svg class="hero-mark" aria-hidden="true"><use href="#ai-mark"/></svg>
+      <div class="wrap hero-inner">
+        <p class="eyebrow">Turnkey FF&amp;E Procurement</p>
+        <h1>Complex furnishing programs, delivered through <em>one accountable partner.</em></h1>
+        <p class="lede">Ashenford International manages the full FF&amp;E lifecycle for hotels, resorts, and workforce housing — sourcing, design, logistics, installation, and closeout — so operators of large physical assets can stop managing vendors and start managing outcomes.</p>
+        <div class="hero-ctas">
+          <a class="btn" href="#contact">Request Consultation</a>
+          <a class="btn btn-ghost" href="#services">Explore the Process</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Market signal strip -->
+    <div class="signals" role="region" aria-label="Market data">
+      <div class="wrap" style="padding-inline:0">
+        <div class="signals-inner">
+          <div class="signal"><strong>$63B+</strong><span>Global hotel FF&amp;E market, growing at a projected 6.9% CAGR through 2033</span></div>
+          <div class="signal"><strong>6,146</strong><span>Hotel projects in the U.S. development pipeline — 746K+ rooms under construction or in planning</span></div>
+          <div class="signal"><strong>2,788</strong><span>Data centers announced or under construction nationwide, driving furnished workforce housing demand</span></div>
+          <div class="signal"><strong>$37.3B</strong><span>Projected U.S. extended-stay hotel market by 2030, up from $22.8B today</span></div>
+        </div>
+        <p class="signals-note">U.S. &amp; global industry data</p>
+      </div>
+    </div>
+
+    <!-- ========================================================== MARKETS -->
+    <section id="markets">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Markets Served</p>
+          <h2>Two high-growth markets. One procurement strategy.</h2>
+          <p>Hospitality and workforce housing share a defining trait: they never stop purchasing. Renovation cycles, brand conversions, new construction, and infrastructure-driven crew housing generate billions in recurring FF&amp;E demand — and both depend on partners who deliver on time, on budget, and with minimal disruption.</p>
+        </div>
+        <div class="markets-grid">
+          <article class="market reveal">
+            <h3>Hospitality — Hotels &amp; Resorts</h3>
+            <p>An industry built on continuous renewal. Guest rooms turn over on a 5–7 year renovation cycle and mattresses on a 7–10 year replacement cycle, meaning every property purchases repeatedly across its life.</p>
+            <ul>
+              <li>Guest room renovations &amp; brand conversions</li>
+              <li>New construction &amp; property openings</li>
+              <li>Mattress &amp; bedding replacement programs</li>
+              <li>Public spaces, lobby &amp; reception FF&amp;E</li>
+            </ul>
+          </article>
+          <article class="market reveal">
+            <h3>Temporary Workforce Housing</h3>
+            <p>America's infrastructure boom — data centers, energy projects, manufacturing, and large-scale development — is creating unprecedented demand for furnished accommodations that can stand up fast and perform under heavy use.</p>
+            <ul>
+              <li>Data center &amp; energy project crew housing</li>
+              <li>Extended-stay &amp; corporate housing refreshes</li>
+              <li>Complete furniture &amp; sleep-system packages</li>
+              <li>Multi-family &amp; student housing developments</li>
+            </ul>
+          </article>
+        </div>
+        <p class="thesis reveal">We don't sell products. We deliver turnkey solutions — one partner accountable from concept to completion.</p>
+      </div>
+    </section>
+
+    <!-- ========================================================== SERVICES -->
+    <section class="services" id="services">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">The Project Lifecycle</p>
+          <h2>Seven core services. One seamless engagement.</h2>
+          <p>Most FF&amp;E projects fail in the seams — between the manufacturer, the freight company, and the installation crew. Ashenford removes the seams by owning every stage of the lifecycle through a single point of contact.</p>
+        </div>
+        <ol class="lifecycle">
+          <li class="reveal">
+            <span class="num" aria-hidden="true"></span>
+            <div>
+              <h3>Procurement &amp; Strategic Sourcing</h3>
+              <p>Factory-direct sourcing across a curated network of domestic and international manufacturing partners — vendor management, product specification, budget optimization, and purchasing coordination through one trusted source.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="num" aria-hidden="true"></span>
+            <div>
+              <h3>Design &amp; Space Planning</h3>
+              <p>Interior design coordination, space planning, furniture layouts, and product selection that align each environment with operational goals, brand standards, and the guest experience.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="num" aria-hidden="true"></span>
+            <div>
+              <h3>Furniture, Fixtures &amp; Bedding Solutions</h3>
+              <p>Commercial-grade case goods, seating, mattresses, bedding systems, and support foundations engineered for hospitality and workforce environments — selected for durability, comfort, and long-term value.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="num" aria-hidden="true"></span>
+            <div>
+              <h3>Décor, Finishing Elements &amp; Soft Goods</h3>
+              <p>Lighting, artwork, mirrors, rugs, window treatments, hospitality linens, and textiles — the finishing details that bring a space to life and reflect each property's brand.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="num" aria-hidden="true"></span>
+            <div>
+              <h3>Logistics &amp; White-Glove Delivery</h3>
+              <p>Nationwide transportation, warehousing, inventory management, delivery scheduling, and room-by-room placement — coordinated so products arrive where they need to be, when they need to be, with minimal disruption.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="num" aria-hidden="true"></span>
+            <div>
+              <h3>Installation &amp; Project Execution</h3>
+              <p>Experienced installation teams handle assembly, placement, on-site coordination, supervision, and quality control — delivered safely, efficiently, and on schedule.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="num" aria-hidden="true"></span>
+            <div>
+              <h3>Removal &amp; Project Completion</h3>
+              <p>Existing furniture removal, debris clearing, site clean-up, punch-list completion, final walkthrough, and project closeout — because our commitment doesn't end when installation begins.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ========================================================== ADVANTAGE -->
+    <section id="advantage">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Why We Win</p>
+          <h2>Independence is our structural advantage.</h2>
+          <p>Ashenford is not a manufacturer — and that is deliberate. Because we are not tied to one factory, one product line, or one catalog, every recommendation is built around the customer's budget, brand standards, and timeline rather than a fixed inventory.</p>
+        </div>
+        <div class="adv-grid">
+          <article class="adv reveal">
+            <svg viewBox="0 0 34 34" fill="none" aria-hidden="true"><path d="M17 3 L31 17 L17 31 L3 17 Z" stroke="#C6A566" stroke-width="1.5"/><path d="M11 17 L15.5 21.5 L23.5 12.5" stroke="#EDE8DD" stroke-width="1.8" fill="none"/></svg>
+            <h3>Commercial-Grade Quality</h3>
+            <p>Products engineered for hospitality and high-occupancy environments, sourced through trusted, vetted manufacturing partners.</p>
+          </article>
+          <article class="adv reveal">
+            <svg viewBox="0 0 34 34" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="#C6A566" stroke-width="1.5"/><circle cx="23" cy="23" r="7" stroke="#EDE8DD" stroke-width="1.5"/><path d="M15.5 15.5 L18.5 18.5" stroke="#C6A566" stroke-width="1.5"/></svg>
+            <h3>Network Flexibility</h3>
+            <p>A broad, multi-category vendor network lets us match the right product and price point to every project — never a one-catalog answer.</p>
+          </article>
+          <article class="adv reveal">
+            <svg viewBox="0 0 34 34" fill="none" aria-hidden="true"><path d="M5 29 L29 5" stroke="#EDE8DD" stroke-width="1.6"/><path d="M17 5 H29 V17" stroke="#C6A566" stroke-width="1.6" fill="none"/></svg>
+            <h3>Speed to Completion</h3>
+            <p>Compressed timelines through parallel sourcing, staged logistics, and coordinated installation — projects stay on schedule and rooms return to revenue faster.</p>
+          </article>
+          <article class="adv reveal">
+            <svg viewBox="0 0 34 34" fill="none" aria-hidden="true"><path d="M17 3 L28 8 V16 C28 24 23 29 17 31 C11 29 6 24 6 16 V8 Z" stroke="#C6A566" stroke-width="1.5" fill="none"/><path d="M12.5 17 L16 20.5 L22 13.5" stroke="#EDE8DD" stroke-width="1.7" fill="none"/></svg>
+            <h3>Absolute Accountability</h3>
+            <p>One contract, one point of contact, one team answerable for the outcome — from first specification to final walkthrough.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================== CONTACT -->
+    <section class="contact" id="contact">
+      <div class="wrap contact-grid">
+        <div class="contact-side reveal">
+          <p class="eyebrow">Request Consultation</p>
+          <h2>Tell us about your property.</h2>
+          <p>Share a few details about your project and a member of our team will respond within one business day with next steps — typically a scoping conversation and preliminary budget framework.</p>
+          <p class="direct">Prefer email? Reach us directly at <a href="#" id="contactEmail" rel="nofollow">loading…</a></p>
+        </div>
+
+        <!-- ======================================================
+             WEB3FORMS CONTACT FORM
+             1. Replace YOUR_ACCESS_KEY_HERE with your Web3Forms key.
+             2. Recipient address is set in the Web3Forms dashboard.
+             3. The hidden "subject" field is an anti-bot honeypot —
+                it must stay empty and hidden. Do not remove.
+             ====================================================== -->
+        <form id="consultForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+          <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+          <input type="hidden" name="from_name" value="Ashenford International Website">
+
+          <!-- Honeypot (hidden via CSS) -->
+          <div class="hp-field" aria-hidden="true">
+            <label for="subject">Subject</label>
+            <input type="text" name="subject" id="subject" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="field">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Jordan Reeve" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Corporate Email</label>
+            <input type="email" id="email" name="email" placeholder="j.reeve@company.com" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" autocomplete="tel" required>
+          </div>
+          <div class="field">
+            <label for="company">Property / Company Name</label>
+            <input type="text" id="company" name="company" placeholder="Harborview Hotel Group" autocomplete="organization" required>
+          </div>
+
+          <div class="field">
+            <label for="projectType">Project Type</label>
+            <select id="projectType" name="project_type" required>
+              <option value="" disabled selected>Select project type</option>
+              <option>Hotel Renovation</option>
+              <option>New Construction</option>
+              <option>Extended-Stay / Workforce Housing Refresh</option>
+              <option>Corporate / Multi-family Development</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="primaryNeed">Primary Need</label>
+            <select id="primaryNeed" name="primary_need" required>
+              <option value="" disabled selected>Select primary need</option>
+              <option>Mattress &amp; Bedding Program</option>
+              <option>Complete Guest Room Turnkey Package</option>
+              <option>Public Spaces &amp; Lobby FF&amp;E</option>
+              <option>Logistics &amp; Installation Only</option>
+            </select>
+          </div>
+
+          <div class="field full">
+            <label for="timeline">Timeline</label>
+            <select id="timeline" name="timeline" required>
+              <option value="" disabled selected>Select timeline</option>
+              <option>Immediate (&lt; 3 months)</option>
+              <option>Mid-term (3–6 months)</option>
+              <option>Planning Phase (6+ months)</option>
+            </select>
+          </div>
+
+          <div class="field full">
+            <label for="message">Project Details</label>
+            <textarea id="message" name="message" placeholder="Property size, room count, scope, budget range — whatever you can share." required></textarea>
+          </div>
+
+          <div class="form-foot">
+            <button type="submit" class="btn" id="submitBtn">Request Consultation</button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================== FOOTER -->
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <a class="foot-brand" href="#top" aria-label="Back to top">
+          <svg aria-hidden="true"><use href="#ai-mark"/></svg>
+          <span class="brand-name" style="font-size:1rem">Ashenford<small>International</small></span>
+        </a>
+        <ul class="foot-links">
+          <li><a href="#markets">Markets</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#advantage">Why Ashenford</a></li>
+          <li><a href="#contact">Request Consultation</a></li>
+        </ul>
+      </div>
+      <div class="foot-legal">
+        <p>© <span id="year">2026</span> Ashenford International. All rights reserved.</p>
+        <p><a href="#" rel="nofollow">Privacy Policy</a> &nbsp;·&nbsp; <a href="#" rel="nofollow">Terms of Service</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* ---------- Footer year ---------- */
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    /* ---------- Mobile nav ---------- */
+    (function(){
+      var toggle = document.getElementById('navToggle');
+      var links  = document.getElementById('navLinks');
+      toggle.addEventListener('click', function(){
+        var open = links.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      links.addEventListener('click', function(e){
+        if (e.target.tagName === 'A'){
+          links.classList.remove('open');
+          toggle.setAttribute('aria-expanded','false');
+        }
+      });
+    })();
+
+    /* ---------- Email obfuscation (split-variable) ----------
+       The address never appears whole in the page source, so
+       spam bots scraping HTML can't harvest it. To change the
+       address shown, edit eUser / eDom below.                */
+    (function(){
+      var eUser = 'info', eDom = 'ashenfordinternational.com';
+      var el = document.getElementById('contactEmail');
+      var addr = eUser + '@' + eDom;
+      el.textContent = addr;
+      el.setAttribute('href', 'mailto:' + addr);
+    })();
+
+    /* ---------- Scroll reveal ---------- */
+    (function(){
+      var items = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)){
+        items.forEach(function(el){ el.classList.add('in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if (entry.isIntersecting){
+            entry.target.classList.add('in');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      items.forEach(function(el){ io.observe(el); });
+    })();
+
+    /* ---------- Web3Forms async submit ---------- */
+    (function(){
+      var form   = document.getElementById('consultForm');
+      var status = document.getElementById('formStatus');
+      var btn    = document.getElementById('submitBtn');
+
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+
+        /* native validation */
+        if (!form.checkValidity()){
+          form.reportValidity();
+          return;
+        }
+        /* honeypot: silently drop bot submissions */
+        if (form.subject.value !== ''){ return; }
+
+        btn.disabled = true;
+        status.textContent = 'Sending…';
+
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        })
+        .then(function(res){ return res.json(); })
+        .then(function(data){
+          if (data.success){
+            form.reset();
+            status.textContent = 'Received — we\u2019ll be in touch within one business day.';
+          } else {
+            status.textContent = 'Something went wrong. Email us directly and we\u2019ll take it from there.';
+          }
+        })
+        .catch(function(){
+          status.textContent = 'Connection issue. Email us directly and we\u2019ll take it from there.';
+        })
+        .finally(function(){ btn.disabled = false; });
+      });
+    })();
+  </script>
+</body>
+</html>
