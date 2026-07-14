@@ -1,797 +1,597 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashenford International — Freight, Installation &amp; Site Services for National Brands</title>
+<meta name="description" content="Ashenford International is an independent program-services partner for national brands and multi-site operators — freight &amp; shipping, installation, setup &amp; teardown, and housekeeping supply programs, delivered under one contract through a vetted national fulfillment network.">
+<!-- TODO: set the real domain in the canonical + OG URLs below before launch -->
+<link rel="canonical" href="https://ashenfordinternational.com/">
 
-  <title>Ashenford International — Turnkey FF&amp;E Procurement for Hospitality &amp; Workforce Housing</title>
-  <meta name="description" content="Ashenford International delivers end-to-end FF&E procurement, logistics, and installation for hotels, resorts, and workforce housing — one partner, one process, from concept to completion.">
+<meta property="og:title" content="Ashenford International — Program Services for National Brands">
+<meta property="og:description" content="Freight, installation, setup &amp; teardown, and housekeeping programs — every site, one accountable partner.">
+<meta property="og:url" content="https://ashenfordinternational.com/">
+<meta property="og:site_name" content="Ashenford International">
+<!-- TODO: create a 1200x630 social-card.png and place it next to this file -->
+<meta property="og:image" content="https://ashenfordinternational.com/social-card.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 
-  <!-- ============================================================
-       SOCIAL & SEO META — Open Graph / Twitter
-       Controls link previews on LinkedIn, iMessage, WhatsApp, Slack.
-       social-card.png must be a 1200×630 image in the same repo.
-       ============================================================ -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Ashenford International">
-  <meta property="og:title" content="Ashenford International — Turnkey FF&E Procurement">
-  <meta property="og:description" content="One partner. One process. Seamless execution. End-to-end FF&E sourcing, logistics, and installation for hospitality and workforce housing.">
-  <meta property="og:image" content="https://ashenfordinternational.com/social-card.png">
-  <meta property="og:url" content="https://ashenfordinternational.com">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ashenford International — Turnkey FF&E Procurement">
-  <meta name="twitter:description" content="One partner. One process. Seamless execution. End-to-end FF&E for hospitality and workforce housing.">
-  <meta name="twitter:image" content="https://ashenfordinternational.com/social-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Ashenford International",
+  "url": "https://ashenfordinternational.com/",
+  "description": "Independent program-services partner for national brands and multi-site operators: freight and shipping coordination, installation, setup and teardown, and hospitality and housekeeping supply programs.",
+  "areaServed": "United States",
+  "email": "info@ashenfordinternational.com"
+}
+</script>
 
-  <link rel="icon" type="image/png" href="logo.png">
-  <link rel="apple-touch-icon" href="logo.png">
+<!-- Google Analytics: create a GA4 property, then replace G-XXXXXXXXXX and uncomment.
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+-->
 
-  <!-- ============================================================
-       GOOGLE ANALYTICS (GA4) — Global Site Tag
-       Replace G-XXXXXXXXXX with your Measurement ID.
-       Do NOT delete these two script blocks when editing this file.
-       ============================================================ -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Typography -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Archivo:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --coal:#15181E;          /* page ground — warm blue-charcoal */
+    --midnight:#1D232D;      /* raised surface */
+    --midnight-2:#242C38;    /* hover surface */
+    --slate:#39424F;         /* hairlines on dark */
+    --bone:#EDE8DE;          /* primary text on dark / light ground */
+    --bone-dim:#A9A69C;      /* secondary text on dark */
+    --ivory:#F4F1E9;         /* light section ground */
+    --ink:#23262B;           /* text on ivory */
+    --ink-dim:#6E6F6A;       /* secondary on ivory */
+    --line-light:#DDD8CB;    /* hairlines on ivory */
+    --champagne:#C7A468;     /* accent */
+    --champagne-bright:#DDBC82;
 
-  <style>
-    /* ==========================================================
-       ASHENFORD INTERNATIONAL — DESIGN TOKENS
-       ========================================================== */
-    :root{
-      --ink:        #0F141C;   /* midnight ground          */
-      --ink-2:      #141B26;   /* raised panel             */
-      --ink-3:      #1B2432;   /* card / field surface     */
-      --hairline:   #2A3547;   /* rules & borders          */
-      --bone:       #EDE8DD;   /* primary text             */
-      --mist:       #97A1B1;   /* secondary text           */
-      --champagne:  #C6A566;   /* brand accent             */
-      --champagne-2:#E3CFA0;   /* accent highlight         */
-      --font-display:'Marcellus', Georgia, serif;
-      --font-body:  'Archivo', -apple-system, 'Segoe UI', sans-serif;
-      --measure: 62ch;
-      --pad: clamp(1.25rem, 4vw, 3rem);
-    }
+    --display:'Marcellus', 'Georgia', serif;
+    --body:'Figtree', system-ui, sans-serif;
+    --maxw:1140px;
+  }
 
-    *{ margin:0; padding:0; box-sizing:border-box; }
-    html{ scroll-behavior:smooth; scroll-padding-top:5.5rem; }
-    @media (prefers-reduced-motion: reduce){
-      html{ scroll-behavior:auto; }
-      *, *::before, *::after{ animation:none !important; transition:none !important; }
-    }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--body);
+    background:var(--coal);
+    color:var(--bone);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
 
-    body{
-      background:var(--ink);
-      color:var(--bone);
-      font-family:var(--font-body);
-      font-weight:300;
-      font-size:1.0625rem;
-      line-height:1.7;
-      -webkit-font-smoothing:antialiased;
-    }
+  .eyebrow{
+    font-size:11.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--champagne);
+  }
+  h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.12;letter-spacing:.005em}
 
-    ::selection{ background:var(--champagne); color:var(--ink); }
+  .btn{
+    display:inline-flex;align-items:center;gap:.6em;
+    font-family:var(--body);font-weight:600;font-size:14.5px;letter-spacing:.04em;
+    padding:15px 28px;border-radius:2px;
+    background:var(--champagne);color:#1A1610;
+    border:1px solid var(--champagne);cursor:pointer;
+    transition:background .18s ease,border-color .18s ease;
+  }
+  .btn:hover{background:var(--champagne-bright);border-color:var(--champagne-bright)}
+  .btn-ghost{background:transparent;color:var(--bone);border:1px solid var(--slate)}
+  .btn-ghost:hover{border-color:var(--champagne);color:var(--champagne-bright);background:transparent}
 
-    h1,h2,h3{ font-family:var(--font-display); font-weight:400; line-height:1.15; letter-spacing:.01em; }
-    a{ color:var(--champagne-2); text-decoration:none; }
-    a:focus-visible, button:focus-visible, input:focus-visible,
-    select:focus-visible, textarea:focus-visible{
-      outline:2px solid var(--champagne); outline-offset:3px;
-    }
-    img, svg{ display:block; }
+  a:focus-visible,.btn:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{
+    outline:2px solid var(--champagne);outline-offset:3px;
+  }
 
-    .wrap{ max-width:1160px; margin-inline:auto; padding-inline:var(--pad); }
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(21,24,30,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(57,66,79,.6);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:14px}
+  .brand svg{width:40px;height:40px;display:block}
+  .brand .name{font-family:var(--display);font-size:16px;letter-spacing:.16em;text-transform:uppercase;color:var(--bone)}
+  .brand .name span{color:var(--champagne)}
+  .nav-links{display:flex;align-items:center;gap:34px}
+  .nav-links a{font-size:13.5px;font-weight:500;letter-spacing:.06em;color:var(--bone-dim);transition:color .16s ease}
+  .nav-links a:hover{color:var(--champagne-bright)}
+  .nav-links .btn{padding:11px 20px;font-size:13px}
+  .menu-btn{
+    display:none;background:transparent;border:1px solid var(--slate);
+    border-radius:2px;padding:9px 11px;cursor:pointer;line-height:0;
+  }
+  .menu-btn svg{width:20px;height:20px;stroke:var(--bone)}
+  .mobile-menu{display:none;border-top:1px solid var(--slate);background:rgba(21,24,30,.98)}
+  .mobile-menu.open{display:block}
+  .mobile-menu a{display:block;padding:16px 28px;font-size:15px;color:var(--bone-dim);border-bottom:1px solid rgba(57,66,79,.4)}
+  .mobile-menu a:last-child{border-bottom:none;color:var(--champagne)}
+  @media(max-width:760px){
+    .nav-links{display:none}
+    .menu-btn{display:inline-flex}
+  }
+  @media(min-width:761px){.mobile-menu{display:none !important}}
 
-    /* Eyebrow label system */
-    .eyebrow{
-      display:flex; align-items:center; gap:.75rem;
-      font-size:.72rem; font-weight:500; letter-spacing:.32em;
-      text-transform:uppercase; color:var(--champagne);
-      margin-bottom:1.25rem;
-    }
-    .eyebrow::before{ content:""; width:2.25rem; height:1px; background:var(--champagne); opacity:.7; }
+  /* ---------- HERO ---------- */
+  .hero{position:relative;padding:120px 0 100px;overflow:hidden;
+    background:
+      radial-gradient(900px 500px at 85% -10%, rgba(199,164,104,.10), transparent 60%),
+      linear-gradient(180deg, #191E26 0%, var(--coal) 100%);
+  }
+  .hero .wrap{max-width:920px;margin-left:auto;margin-right:auto}
+  .hero h1{font-size:clamp(38px,6vw,68px);color:var(--bone);margin:26px 0 24px;max-width:800px}
+  .hero h1 em{font-style:normal;color:var(--champagne)}
+  .hero .sub{font-size:clamp(16px,1.9vw,19px);color:var(--bone-dim);max-width:640px;margin-bottom:40px}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+  /* signature route line under hero */
+  .route{position:relative;margin-top:78px;height:2px;background:linear-gradient(90deg,transparent,var(--slate) 12%,var(--slate) 88%,transparent)}
+  .route .stop{position:absolute;top:50%;transform:translate(-50%,-50%);width:9px;height:9px;border-radius:50%;background:var(--coal);border:2px solid var(--champagne)}
+  .route .stop.fill{background:var(--champagne)}
+  .route-labels{display:flex;justify-content:space-between;max-width:var(--maxw);margin:14px auto 0;padding:0 28px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--bone-dim)}
+  @media(max-width:640px){.route-labels{font-size:9.5px;letter-spacing:.1em}}
 
-    /* ==========================================================
-       NAVIGATION
-       ========================================================== */
-    header{
-      position:sticky; top:0; z-index:50;
-      background:rgba(15,20,28,.88);
-      backdrop-filter:blur(12px);
-      -webkit-backdrop-filter:blur(12px);
-      border-bottom:1px solid var(--hairline);
-    }
-    .nav{
-      display:flex; align-items:center; justify-content:space-between;
-      gap:1.5rem; padding-block:.9rem;
-    }
-    .brand{ display:flex; align-items:center; gap:.85rem; color:var(--bone); }
-    .brand svg{ width:44px; height:44px; flex:none; }
-    .brand-name{
-      font-family:var(--font-display); font-size:1.15rem; letter-spacing:.14em;
-      text-transform:uppercase; line-height:1.1; color:var(--bone);
-    }
-    .brand-name small{
-      display:block; font-family:var(--font-body); font-weight:400;
-      font-size:.58rem; letter-spacing:.44em; color:var(--champagne);
-      text-transform:uppercase; margin-top:.2rem;
-    }
-    .nav-links{ display:flex; align-items:center; gap:2rem; list-style:none; }
-    .nav-links a{
-      color:var(--mist); font-size:.88rem; font-weight:400; letter-spacing:.04em;
-      transition:color .2s ease;
-    }
-    .nav-links a:hover{ color:var(--bone); }
+  /* ---------- VALUE STRIP ---------- */
+  .values{border-top:1px solid rgba(57,66,79,.6);border-bottom:1px solid rgba(57,66,79,.6);background:var(--midnight)}
+  .values .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+  .val{padding:34px 30px;border-left:1px solid rgba(57,66,79,.6)}
+  .val:first-child{border-left:none;padding-left:0}
+  .val h3{font-size:18px;color:var(--bone);margin-bottom:8px}
+  .val p{font-size:14px;color:var(--bone-dim)}
+  @media(max-width:760px){
+    .values .wrap{grid-template-columns:1fr}
+    .val{border-left:none;border-top:1px solid rgba(57,66,79,.6);padding:26px 0}
+    .val:first-child{border-top:none}
+  }
 
-    .btn{
-      display:inline-block; padding:.8rem 1.7rem;
-      font-family:var(--font-body); font-size:.85rem; font-weight:500;
-      letter-spacing:.12em; text-transform:uppercase;
-      color:var(--ink); background:var(--champagne);
-      border:1px solid var(--champagne); border-radius:2px;
-      cursor:pointer; transition:background .2s ease, color .2s ease;
-    }
-    .btn:hover{ background:var(--champagne-2); border-color:var(--champagne-2); }
-    .btn-ghost{
-      background:transparent; color:var(--champagne-2);
-      border:1px solid var(--champagne);
-    }
-    .btn-ghost:hover{ background:rgba(198,165,102,.12); color:var(--champagne-2); }
+  /* ---------- SERVICES ---------- */
+  section{scroll-margin-top:84px}
+  .sec-pad{padding:104px 0}
+  .sec-head{max-width:680px;margin-bottom:56px}
+  .sec-head h2{font-size:clamp(30px,4vw,46px);color:var(--bone);margin-top:18px}
+  .sec-head.on-ivory h2{color:var(--ink)}
+  .sec-head p.lede{margin-top:18px;font-size:16.5px;color:var(--bone-dim)}
 
-    .nav-toggle{
-      display:none; background:none; border:1px solid var(--hairline);
-      border-radius:2px; padding:.5rem .65rem; cursor:pointer;
-    }
-    .nav-toggle span{
-      display:block; width:20px; height:2px; background:var(--bone); margin:4px 0;
-    }
+  .svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .svc{
+    border:1px solid var(--slate);border-top:2px solid var(--champagne);
+    background:var(--midnight);padding:38px 34px;
+    transition:background .2s ease;
+  }
+  .svc:hover{background:var(--midnight-2)}
+  .svc .fn{font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--champagne)}
+  .svc h3{font-size:26px;color:var(--bone);margin:14px 0 12px}
+  .svc p{font-size:15px;color:var(--bone-dim)}
+  @media(max-width:760px){.svc-grid{grid-template-columns:1fr}}
 
-    @media (max-width: 860px){
-      .nav-toggle{ display:block; }
-      .nav-links{
-        position:absolute; top:100%; left:0; right:0;
-        flex-direction:column; align-items:flex-start; gap:0;
-        background:var(--ink-2); border-bottom:1px solid var(--hairline);
-        padding:0 var(--pad);
-        max-height:0; overflow:hidden; transition:max-height .3s ease;
-      }
-      .nav-links.open{ max-height:420px; padding-block:1rem; }
-      .nav-links li{ width:100%; }
-      .nav-links a{ display:block; padding:.8rem 0; }
-      .nav-cta-desktop{ display:none; }
-    }
+  /* ---------- HOW WE WORK (ivory) ---------- */
+  .how{background:var(--ivory);color:var(--ink)}
+  .how .eyebrow{color:#9A7B43}
+  .how-route{position:relative;height:2px;background:var(--line-light);margin:70px 0 0}
+  .how-route .stop{position:absolute;top:50%;transform:translate(-50%,-50%);width:11px;height:11px;border-radius:50%;background:var(--ivory);border:2px solid #9A7B43}
+  .how-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;margin-top:34px}
+  .how-step h3{font-size:22px;color:var(--ink);margin-bottom:10px}
+  .how-step .k{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#9A7B43;display:block;margin-bottom:12px}
+  .how-step p{font-size:15px;color:var(--ink-dim)}
+  .how-foot{margin-top:54px;font-family:var(--display);font-size:20px;color:var(--ink);max-width:760px;line-height:1.45}
+  @media(max-width:760px){
+    .how-steps{grid-template-columns:1fr}
+    .how-route{display:none}
+  }
 
-    /* ==========================================================
-       HERO
-       ========================================================== */
-    .hero{
-      position:relative; overflow:hidden;
-      padding-block:clamp(5rem, 12vw, 9.5rem) clamp(4rem, 9vw, 7rem);
-      background:
-        radial-gradient(1100px 520px at 82% -10%, rgba(198,165,102,.10), transparent 60%),
-        linear-gradient(180deg, var(--ink-2), var(--ink) 70%);
-    }
-    .hero-mark{
-      position:absolute; right:-6%; top:50%; transform:translateY(-50%);
-      width:min(560px, 55vw); height:auto; opacity:.05; pointer-events:none;
-    }
-    .hero-inner{ position:relative; max-width:760px; }
-    .hero h1{
-      font-size:clamp(2.3rem, 5.2vw, 3.9rem);
-      color:var(--bone); margin-bottom:1.5rem;
-    }
-    .hero h1 em{ font-style:normal; color:var(--champagne-2); }
-    .hero p.lede{
-      font-size:clamp(1.05rem, 1.6vw, 1.25rem); color:var(--mist);
-      max-width:56ch; margin-bottom:2.5rem;
-    }
-    .hero-ctas{ display:flex; flex-wrap:wrap; gap:1rem; }
+  /* ---------- INDUSTRIES ---------- */
+  .ind-list{display:grid;grid-template-columns:1fr 1fr;gap:0 60px;max-width:980px}
+  .ind{display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:26px 0;border-bottom:1px solid rgba(57,66,79,.6)}
+  .ind h3{font-size:22px;color:var(--bone)}
+  .ind p{font-size:13.5px;color:var(--bone-dim);text-align:right;max-width:260px}
+  @media(max-width:760px){
+    .ind-list{grid-template-columns:1fr}
+    .ind{flex-direction:column;align-items:flex-start;gap:6px}
+    .ind p{text-align:left}
+  }
 
-    /* Market-signal strip */
-    .signals{
-      border-top:1px solid var(--hairline);
-      border-bottom:1px solid var(--hairline);
-      background:var(--ink-2);
-    }
-    .signals-inner{
-      display:grid; grid-template-columns:repeat(4, 1fr);
-      gap:1px; background:var(--hairline);
-    }
-    .signal{ background:var(--ink-2); padding:1.9rem 1.6rem; }
-    .signal strong{
-      display:block; font-family:var(--font-display);
-      font-size:clamp(1.6rem, 2.6vw, 2.15rem); color:var(--champagne-2);
-      margin-bottom:.35rem;
-    }
-    .signal span{ font-size:.85rem; color:var(--mist); line-height:1.5; display:block; }
-    .signals-note{
-      font-size:.72rem; letter-spacing:.18em; text-transform:uppercase;
-      color:var(--mist); padding:.85rem var(--pad); text-align:right;
-      border-top:1px solid var(--hairline);
-    }
-    @media (max-width: 860px){ .signals-inner{ grid-template-columns:repeat(2, 1fr); } }
-    @media (max-width: 460px){ .signals-inner{ grid-template-columns:1fr; } }
+  /* ---------- INDEPENDENCE ---------- */
+  .indep{background:var(--midnight);border-top:1px solid rgba(57,66,79,.6);border-bottom:1px solid rgba(57,66,79,.6)}
+  .indep .wrap{max-width:880px}
+  .indep h2{font-size:clamp(28px,3.6vw,42px);color:var(--bone);margin-top:18px}
+  .indep p.body{margin-top:22px;font-size:16.5px;color:var(--bone-dim)}
+  .indep p.body strong{color:var(--bone);font-weight:600}
+  .indep .kicker{margin-top:30px;padding-left:24px;border-left:2px solid var(--champagne);font-family:var(--display);font-size:21px;color:var(--bone);line-height:1.45}
 
-    /* ==========================================================
-       SECTIONS — shared
-       ========================================================== */
-    section{ padding-block:clamp(4rem, 9vw, 7.5rem); }
-    .section-head{ max-width:720px; margin-bottom:clamp(2.5rem, 5vw, 4rem); }
-    .section-head h2{ font-size:clamp(1.9rem, 3.6vw, 2.7rem); margin-bottom:1.1rem; }
-    .section-head p{ color:var(--mist); max-width:var(--measure); }
+  /* ---------- CONTACT ---------- */
+  .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:start;padding:104px 0}
+  .contact h2{font-size:clamp(28px,3.6vw,44px);color:var(--bone);margin:16px 0 18px}
+  .contact .sub{color:var(--bone-dim);font-size:16.5px;max-width:400px}
+  .contact .direct{margin-top:30px;font-size:14.5px;color:var(--bone-dim)}
+  .contact .direct a{color:var(--champagne)}
 
-    /* ==========================================================
-       MARKETS
-       ========================================================== */
-    .markets-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; }
-    .market{
-      position:relative; background:var(--ink-2);
-      border:1px solid var(--hairline); border-radius:3px;
-      padding:2.5rem 2.25rem; overflow:hidden;
-    }
-    .market::after{
-      content:""; position:absolute; inset-inline:0; top:0; height:2px;
-      background:linear-gradient(90deg, var(--champagne), transparent 70%);
-    }
-    .market h3{ font-size:1.45rem; margin-bottom:1rem; color:var(--bone); }
-    .market p{ color:var(--mist); margin-bottom:1.35rem; }
-    .market ul{ list-style:none; }
-    .market li{
-      padding:.55rem 0 .55rem 1.4rem; position:relative;
-      color:var(--bone); font-size:.95rem; border-top:1px solid var(--hairline);
-    }
-    .market li::before{
-      content:""; position:absolute; left:0; top:1.15rem;
-      width:.55rem; height:.55rem; border:1px solid var(--champagne);
-      transform:rotate(45deg);
-    }
-    @media (max-width: 860px){ .markets-grid{ grid-template-columns:1fr; } }
+  form .field{margin-bottom:18px}
+  form label{display:block;font-size:12.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--bone-dim);margin-bottom:8px}
+  form input,form select,form textarea{
+    width:100%;font-family:var(--body);font-size:15px;color:var(--bone);
+    background:rgba(255,255,255,.03);
+    border:1px solid var(--slate);border-radius:2px;
+    padding:14px 15px;transition:border-color .16s ease;
+  }
+  form select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--champagne) 50%),linear-gradient(135deg,var(--champagne) 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 14px) 50%;background-size:6px 6px;background-repeat:no-repeat}
+  form select option{background:var(--midnight);color:var(--bone)}
+  form input::placeholder,form textarea::placeholder{color:#6E7480}
+  form input:focus,form select:focus,form textarea:focus{border-color:var(--champagne)}
+  form textarea{resize:vertical;min-height:110px}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  form .btn{margin-top:6px;width:100%;justify-content:center}
+  .privacy-note{margin-top:12px;font-size:12px;color:var(--bone-dim);opacity:.75;text-align:center}
+  .hp{position:absolute;left:-9999px;opacity:0;height:0;width:0;overflow:hidden}
+  #formStatus{margin-top:16px;font-size:14px;line-height:1.5;display:none}
+  #formStatus.show{display:block}
+  #formStatus.ok{color:var(--champagne-bright)}
+  #formStatus.err{color:#E29A9A}
+  @media(max-width:820px){
+    .contact-grid{grid-template-columns:1fr;gap:40px;padding:80px 0}
+    .field-row{grid-template-columns:1fr}
+  }
 
-    .thesis{
-      margin-top:2.75rem; padding:2rem 2.25rem;
-      border-left:2px solid var(--champagne);
-      background:linear-gradient(90deg, rgba(198,165,102,.07), transparent 65%);
-      font-family:var(--font-display); font-size:clamp(1.15rem, 2vw, 1.4rem);
-      color:var(--bone); max-width:56ch;
-    }
+  /* ---------- FOOTER ---------- */
+  footer.foot{border-top:1px solid rgba(57,66,79,.6);color:var(--bone-dim)}
+  .foot-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:38px 0;flex-wrap:wrap}
+  .foot-brand{display:flex;align-items:center;gap:12px}
+  .foot-brand svg{width:34px;height:34px}
+  .foot-brand .fname{font-family:var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--bone);font-size:14px}
+  .foot-brand .ftag{font-size:12.5px;color:var(--bone-dim)}
+  .foot-right{font-size:13px;display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+  .foot-right a:hover{color:var(--champagne-bright)}
 
-    /* ==========================================================
-       SERVICES — the project lifecycle
-       ========================================================== */
-    .services{ background:var(--ink-2); border-block:1px solid var(--hairline); }
-    .lifecycle{ list-style:none; counter-reset:svc; }
-    .lifecycle li{
-      counter-increment:svc;
-      display:grid; grid-template-columns:5.5rem 1fr; gap:1.75rem;
-      padding-block:2.1rem; border-top:1px solid var(--hairline);
-    }
-    .lifecycle li:last-child{ border-bottom:1px solid var(--hairline); }
-    .lifecycle .num{
-      font-family:var(--font-display); font-size:1.05rem; color:var(--champagne);
-      letter-spacing:.08em; padding-top:.2rem;
-    }
-    .lifecycle .num::before{ content:counter(svc, decimal-leading-zero); font-size:1.65rem; display:block; }
-    .lifecycle .num::after{ content:"/ 07"; font-size:.75rem; color:var(--mist); }
-    .lifecycle h3{ font-size:1.3rem; margin-bottom:.55rem; }
-    .lifecycle p{ color:var(--mist); max-width:66ch; }
-    @media (max-width: 640px){
-      .lifecycle li{ grid-template-columns:1fr; gap:.6rem; }
-    }
-
-    /* ==========================================================
-       ADVANTAGE
-       ========================================================== */
-    .adv-grid{ display:grid; grid-template-columns:repeat(4, 1fr); gap:1.5rem; }
-    .adv{
-      background:var(--ink-2); border:1px solid var(--hairline); border-radius:3px;
-      padding:2rem 1.75rem;
-    }
-    .adv svg{ width:34px; height:34px; margin-bottom:1.15rem; }
-    .adv h3{ font-size:1.15rem; margin-bottom:.6rem; }
-    .adv p{ font-size:.92rem; color:var(--mist); }
-    @media (max-width: 1020px){ .adv-grid{ grid-template-columns:repeat(2, 1fr); } }
-    @media (max-width: 560px){ .adv-grid{ grid-template-columns:1fr; } }
-
-    /* ==========================================================
-       CONTACT
-       ========================================================== */
-    .contact{ background:
-        radial-gradient(900px 480px at 12% 0%, rgba(198,165,102,.08), transparent 60%),
-        var(--ink-2);
-      border-top:1px solid var(--hairline);
-    }
-    .contact-grid{
-      display:grid; grid-template-columns:1fr 1.35fr; gap:clamp(2.5rem, 6vw, 5rem);
-      align-items:start;
-    }
-    .contact-side h2{ font-size:clamp(1.9rem, 3.4vw, 2.6rem); margin-bottom:1.1rem; }
-    .contact-side p{ color:var(--mist); margin-bottom:2rem; max-width:44ch; }
-    .contact-side .direct{
-      border-top:1px solid var(--hairline); padding-top:1.5rem;
-      font-size:.95rem; color:var(--mist);
-    }
-    .contact-side .direct a{ color:var(--champagne-2); }
-
-    form{ display:grid; grid-template-columns:1fr 1fr; gap:1.15rem; }
-    .field{ display:flex; flex-direction:column; gap:.45rem; }
-    .field.full{ grid-column:1 / -1; }
-    label{
-      font-size:.72rem; font-weight:500; letter-spacing:.2em;
-      text-transform:uppercase; color:var(--mist);
-    }
-    input, select, textarea{
-      width:100%; padding:.85rem 1rem;
-      background:var(--ink-3); border:1px solid var(--hairline); border-radius:2px;
-      color:var(--bone); font-family:var(--font-body); font-size:.98rem;
-      transition:border-color .2s ease;
-    }
-    input::placeholder, textarea::placeholder{ color:#5D6878; }
-    input:focus, select:focus, textarea:focus{ border-color:var(--champagne); }
-    select{
-      appearance:none; -webkit-appearance:none;
-      background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' fill='none' stroke='%23C6A566' stroke-width='1.5'/></svg>");
-      background-repeat:no-repeat; background-position:right 1rem center;
-      padding-right:2.6rem; cursor:pointer;
-    }
-    select:invalid{ color:#5D6878; }
-    textarea{ min-height:8.5rem; resize:vertical; }
-
-    /* Honeypot — hidden from humans, visible to bots */
-    .hp-field{
-      position:absolute !important; left:-9999px !important;
-      width:1px; height:1px; overflow:hidden; opacity:0;
-    }
-
-    .form-foot{ grid-column:1 / -1; display:flex; align-items:center; gap:1.25rem; flex-wrap:wrap; }
-    .form-status{ font-size:.92rem; color:var(--champagne-2); min-height:1.4em; }
-    @media (max-width: 900px){
-      .contact-grid{ grid-template-columns:1fr; }
-      form{ grid-template-columns:1fr; }
-    }
-
-    /* ==========================================================
-       FOOTER
-       ========================================================== */
-    footer{ border-top:1px solid var(--hairline); padding-block:3rem 2.25rem; background:var(--ink); }
-    .foot-grid{
-      display:flex; justify-content:space-between; align-items:flex-start;
-      gap:2rem; flex-wrap:wrap; margin-bottom:2.25rem;
-    }
-    .foot-brand{ display:flex; align-items:center; gap:.8rem; }
-    .foot-brand svg{ width:36px; height:36px; }
-    .foot-links{ display:flex; gap:2rem; list-style:none; flex-wrap:wrap; }
-    .foot-links a{ color:var(--mist); font-size:.88rem; transition:color .2s ease; }
-    .foot-links a:hover{ color:var(--bone); }
-    .foot-legal{
-      display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap;
-      border-top:1px solid var(--hairline); padding-top:1.5rem;
-      font-size:.8rem; color:#5D6878;
-    }
-    .foot-legal a{ color:#7C8698; }
-    .foot-legal a:hover{ color:var(--bone); }
-
-    /* Scroll reveal */
-    .reveal{ opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
-    .reveal.in{ opacity:1; transform:none; }
-    @media (prefers-reduced-motion: reduce){
-      .reveal{ opacity:1; transform:none; }
-    }
-  </style>
+  @media (prefers-reduced-motion: no-preference){
+    .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease, transform .7s ease}
+    .reveal.in{opacity:1;transform:none}
+  }
+</style>
 </head>
 <body>
 
-  <!-- ============================================================
-       BRAND MARK — inline SVG, defined once, reused via <use>
-       Keystone lozenge enclosing an interlocked A/I monogram.
-       ============================================================ -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <defs>
-      <symbol id="ai-mark" viewBox="0 0 64 64">
-        <!-- keystone lozenge frame -->
-        <path d="M32 3 L61 32 L32 61 L3 32 Z" fill="none" stroke="#C6A566" stroke-width="1.6"/>
-        <path d="M32 9 L55 32 L32 55 L9 32 Z" fill="none" stroke="#C6A566" stroke-width=".7" opacity=".45"/>
-        <!-- A strokes -->
-        <path d="M18.5 45 L30.2 17" fill="none" stroke="#EDE8DD" stroke-width="2.2" stroke-linecap="round"/>
-        <path d="M33.8 17 L45.5 45" fill="none" stroke="#EDE8DD" stroke-width="2.2" stroke-linecap="round"/>
-        <!-- I stem interlocking as the apex of the A -->
-        <path d="M32 13 L32 33" fill="none" stroke="#C6A566" stroke-width="2.2" stroke-linecap="round"/>
-        <!-- shared crossbar: the A's bar and the I's foot serif -->
-        <path d="M23.5 36 L40.5 36" fill="none" stroke="#C6A566" stroke-width="1.8" stroke-linecap="round"/>
-      </symbol>
-    </defs>
-  </svg>
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="Ashenford International home">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <rect x="21" y="21" width="58" height="58" transform="rotate(45 50 50)" fill="none" stroke="#C7A468" stroke-width="2.2"/>
+        <circle cx="50" cy="28" r="4.2" fill="none" stroke="#EDE8DE" stroke-width="3"/>
+        <path d="M 47.2 31.8 L 34 74 M 52.8 31.8 L 66 74 M 39.5 58 L 60.5 58" fill="none" stroke="#EDE8DE" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <span class="name">Ashenford <span>International</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#how">How we work</a>
+      <a href="#industries">Industries</a>
+      <a class="btn" href="#contact">Start a program</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+    <a href="#services">Services</a>
+    <a href="#how">How we work</a>
+    <a href="#industries">Industries</a>
+    <a href="#contact">Start a program →</a>
+  </nav>
+</header>
 
-  <!-- ============================================================ NAV -->
-  <header>
-    <div class="wrap nav">
-      <a class="brand" href="#top" aria-label="Ashenford International — home">
-        <svg role="img" aria-hidden="true"><use href="#ai-mark"/></svg>
-        <span class="brand-name">Ashenford<small>International</small></span>
-      </a>
-      <nav aria-label="Primary">
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#markets">Markets</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#advantage">Why Ashenford</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <a class="btn nav-cta-desktop" href="#contact">Request Consultation</a>
-      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <span class="eyebrow">Independent program services — nationwide</span>
+    <h1>Every site. One accountable <em>partner.</em></h1>
+    <p class="sub">Ashenford International manages freight, installation, setup &amp; teardown, and housekeeping supply programs for national brands and multi-site operators — one contract, one invoice, one team answerable for every location.</p>
+    <div class="hero-cta">
+      <a class="btn" href="#contact">Start a program</a>
+      <a class="btn btn-ghost" href="#services">See services</a>
     </div>
-  </header>
+  </div>
+  <div class="route" aria-hidden="true">
+    <span class="stop fill" style="left:14%"></span>
+    <span class="stop" style="left:38%"></span>
+    <span class="stop" style="left:62%"></span>
+    <span class="stop fill" style="left:86%"></span>
+  </div>
+  <div class="route-labels" aria-hidden="true">
+    <span>Sourced</span><span>Shipped</span><span>Installed</span><span>Standing behind it</span>
+  </div>
+</section>
 
-  <main id="top">
+<!-- ============ VALUE STRIP ============ -->
+<div class="values">
+  <div class="wrap">
+    <div class="val"><h3>One contract, one invoice</h3><p>You contract with Ashenford. We carry the program from purchase order to punch list.</p></div>
+    <div class="val"><h3>A vetted fulfillment network</h3><p>Insured, qualified fulfillment partners selected on merit for each program and region.</p></div>
+    <div class="val"><h3>Program governance on every site</h3><p>Schedules, sign-offs, and site readiness managed centrally — so twenty locations run like one.</p></div>
+  </div>
+</div>
 
-    <!-- ========================================================== HERO -->
-    <section class="hero" aria-label="Introduction">
-      <svg class="hero-mark" aria-hidden="true"><use href="#ai-mark"/></svg>
-      <div class="wrap hero-inner">
-        <p class="eyebrow">Turnkey FF&amp;E Procurement</p>
-        <h1>Complex furnishing programs, delivered through <em>one accountable partner.</em></h1>
-        <p class="lede">Ashenford International manages the full FF&amp;E lifecycle for hotels, resorts, and workforce housing — sourcing, design, logistics, installation, and closeout — so operators of large physical assets can stop managing vendors and start managing outcomes.</p>
-        <div class="hero-ctas">
-          <a class="btn" href="#contact">Request Consultation</a>
-          <a class="btn btn-ghost" href="#services">Explore the Process</a>
-        </div>
+<!-- ============ SERVICES ============ -->
+<section class="sec-pad" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Services</span>
+      <h2>Four service lines. One standard of delivery.</h2>
+      <p class="lede">Engage one line for a single site, or all four across a national rollout — delivered through our fulfillment network under Ashenford's program management, with Ashenford accountable for the result.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc reveal">
+        <span class="fn">Freight &amp; Shipping</span>
+        <h3>Move it to every site, on schedule</h3>
+        <p>Carrier coordination, consolidation, receiving and warehousing, and last-mile delivery to each location — with tracking rolled up across the whole program, not scattered across twenty inboxes.</p>
       </div>
-    </section>
-
-    <!-- Market signal strip -->
-    <div class="signals" role="region" aria-label="Market data">
-      <div class="wrap" style="padding-inline:0">
-        <div class="signals-inner">
-          <div class="signal"><strong>$63B+</strong><span>Global hotel FF&amp;E market, growing at a projected 6.9% CAGR through 2033</span></div>
-          <div class="signal"><strong>6,146</strong><span>Hotel projects in the U.S. development pipeline — 746K+ rooms under construction or in planning</span></div>
-          <div class="signal"><strong>2,788</strong><span>Data centers announced or under construction nationwide, driving furnished workforce housing demand</span></div>
-          <div class="signal"><strong>$37.3B</strong><span>Projected U.S. extended-stay hotel market by 2030, up from $22.8B today</span></div>
-        </div>
-        <p class="signals-note">U.S. &amp; global industry data</p>
+      <div class="svc reveal">
+        <span class="fn">Installation</span>
+        <h3>Crews that finish the job</h3>
+        <p>Furniture, fixture, and equipment installation with site supervision, protection of finished spaces, and punch-list closeout — signed off site by site.</p>
+      </div>
+      <div class="svc reveal">
+        <span class="fn">Setup &amp; Teardown</span>
+        <h3>Openings, rebrands, and resets</h3>
+        <p>New-location openings, renovation turnovers, rebrand rollouts, and seasonal resets — staged and crewed around your operating hours so business doesn't stop while the building changes.</p>
+      </div>
+      <div class="svc reveal">
+        <span class="fn">Hospitality &amp; Housekeeping Programs</span>
+        <h3>Recurring supply, without the chase</h3>
+        <p>Ongoing housekeeping and operating-supply programs for hotels, resorts, and workforce housing — standardized, replenished, and delivered so every property opens every day fully stocked.</p>
       </div>
     </div>
+  </div>
+</section>
 
-    <!-- ========================================================== MARKETS -->
-    <section id="markets">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <p class="eyebrow">Markets Served</p>
-          <h2>Two high-growth markets. One procurement strategy.</h2>
-          <p>Hospitality and workforce housing share a defining trait: they never stop purchasing. Renovation cycles, brand conversions, new construction, and infrastructure-driven crew housing generate billions in recurring FF&amp;E demand — and both depend on partners who deliver on time, on budget, and with minimal disruption.</p>
-        </div>
-        <div class="markets-grid">
-          <article class="market reveal">
-            <h3>Hospitality — Hotels &amp; Resorts</h3>
-            <p>An industry built on continuous renewal. Guest rooms turn over on a 5–7 year renovation cycle and mattresses on a 7–10 year replacement cycle, meaning every property purchases repeatedly across its life.</p>
-            <ul>
-              <li>Guest room renovations &amp; brand conversions</li>
-              <li>New construction &amp; property openings</li>
-              <li>Mattress &amp; bedding replacement programs</li>
-              <li>Public spaces, lobby &amp; reception FF&amp;E</li>
-            </ul>
-          </article>
-          <article class="market reveal">
-            <h3>Temporary Workforce Housing</h3>
-            <p>America's infrastructure boom — data centers, energy projects, manufacturing, and large-scale development — is creating unprecedented demand for furnished accommodations that can stand up fast and perform under heavy use.</p>
-            <ul>
-              <li>Data center &amp; energy project crew housing</li>
-              <li>Extended-stay &amp; corporate housing refreshes</li>
-              <li>Complete furniture &amp; sleep-system packages</li>
-              <li>Multi-family &amp; student housing developments</li>
-            </ul>
-          </article>
-        </div>
-        <p class="thesis reveal">We don't sell products. We deliver turnkey solutions — one partner accountable from concept to completion.</p>
+<!-- ============ HOW WE WORK ============ -->
+<section class="how sec-pad" id="how">
+  <div class="wrap">
+    <div class="sec-head on-ivory">
+      <span class="eyebrow">How we work</span>
+      <h2>Your program travels one route.</h2>
+    </div>
+    <div class="how-route" aria-hidden="true">
+      <span class="stop" style="left:6%"></span>
+      <span class="stop" style="left:50%"></span>
+      <span class="stop" style="left:94%"></span>
+    </div>
+    <div class="how-steps">
+      <div class="how-step">
+        <span class="k">Scope</span>
+        <h3>Define the program</h3>
+        <p>Sites, scope, schedule, and budget — captured in one program plan with clear sign-offs before anything ships.</p>
       </div>
-    </section>
-
-    <!-- ========================================================== SERVICES -->
-    <section class="services" id="services">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <p class="eyebrow">The Project Lifecycle</p>
-          <h2>Seven core services. One seamless engagement.</h2>
-          <p>Most FF&amp;E projects fail in the seams — between the manufacturer, the freight company, and the installation crew. Ashenford removes the seams by owning every stage of the lifecycle through a single point of contact.</p>
-        </div>
-        <ol class="lifecycle">
-          <li class="reveal">
-            <span class="num" aria-hidden="true"></span>
-            <div>
-              <h3>Procurement &amp; Strategic Sourcing</h3>
-              <p>Factory-direct sourcing across a curated network of domestic and international manufacturing partners — vendor management, product specification, budget optimization, and purchasing coordination through one trusted source.</p>
-            </div>
-          </li>
-          <li class="reveal">
-            <span class="num" aria-hidden="true"></span>
-            <div>
-              <h3>Design &amp; Space Planning</h3>
-              <p>Interior design coordination, space planning, furniture layouts, and product selection that align each environment with operational goals, brand standards, and the guest experience.</p>
-            </div>
-          </li>
-          <li class="reveal">
-            <span class="num" aria-hidden="true"></span>
-            <div>
-              <h3>Furniture, Fixtures &amp; Bedding Solutions</h3>
-              <p>Commercial-grade case goods, seating, mattresses, bedding systems, and support foundations engineered for hospitality and workforce environments — selected for durability, comfort, and long-term value.</p>
-            </div>
-          </li>
-          <li class="reveal">
-            <span class="num" aria-hidden="true"></span>
-            <div>
-              <h3>Décor, Finishing Elements &amp; Soft Goods</h3>
-              <p>Lighting, artwork, mirrors, rugs, window treatments, hospitality linens, and textiles — the finishing details that bring a space to life and reflect each property's brand.</p>
-            </div>
-          </li>
-          <li class="reveal">
-            <span class="num" aria-hidden="true"></span>
-            <div>
-              <h3>Logistics &amp; White-Glove Delivery</h3>
-              <p>Nationwide transportation, warehousing, inventory management, delivery scheduling, and room-by-room placement — coordinated so products arrive where they need to be, when they need to be, with minimal disruption.</p>
-            </div>
-          </li>
-          <li class="reveal">
-            <span class="num" aria-hidden="true"></span>
-            <div>
-              <h3>Installation &amp; Project Execution</h3>
-              <p>Experienced installation teams handle assembly, placement, on-site coordination, supervision, and quality control — delivered safely, efficiently, and on schedule.</p>
-            </div>
-          </li>
-          <li class="reveal">
-            <span class="num" aria-hidden="true"></span>
-            <div>
-              <h3>Removal &amp; Project Completion</h3>
-              <p>Existing furniture removal, debris clearing, site clean-up, punch-list completion, final walkthrough, and project closeout — because our commitment doesn't end when installation begins.</p>
-            </div>
-          </li>
-        </ol>
+      <div class="how-step">
+        <span class="k">Mobilize</span>
+        <h3>Assemble the network</h3>
+        <p>We select and contract the right fulfillment partners for each region and trade — vetted, insured, and answerable to your program's standard.</p>
       </div>
-    </section>
-
-    <!-- ========================================================== ADVANTAGE -->
-    <section id="advantage">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <p class="eyebrow">Why We Win</p>
-          <h2>Independence is our structural advantage.</h2>
-          <p>Ashenford is not a manufacturer — and that is deliberate. Because we are not tied to one factory, one product line, or one catalog, every recommendation is built around the customer's budget, brand standards, and timeline rather than a fixed inventory.</p>
-        </div>
-        <div class="adv-grid">
-          <article class="adv reveal">
-            <svg viewBox="0 0 34 34" fill="none" aria-hidden="true"><path d="M17 3 L31 17 L17 31 L3 17 Z" stroke="#C6A566" stroke-width="1.5"/><path d="M11 17 L15.5 21.5 L23.5 12.5" stroke="#EDE8DD" stroke-width="1.8" fill="none"/></svg>
-            <h3>Commercial-Grade Quality</h3>
-            <p>Products engineered for hospitality and high-occupancy environments, sourced through trusted, vetted manufacturing partners.</p>
-          </article>
-          <article class="adv reveal">
-            <svg viewBox="0 0 34 34" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="#C6A566" stroke-width="1.5"/><circle cx="23" cy="23" r="7" stroke="#EDE8DD" stroke-width="1.5"/><path d="M15.5 15.5 L18.5 18.5" stroke="#C6A566" stroke-width="1.5"/></svg>
-            <h3>Network Flexibility</h3>
-            <p>A broad, multi-category vendor network lets us match the right product and price point to every project — never a one-catalog answer.</p>
-          </article>
-          <article class="adv reveal">
-            <svg viewBox="0 0 34 34" fill="none" aria-hidden="true"><path d="M5 29 L29 5" stroke="#EDE8DD" stroke-width="1.6"/><path d="M17 5 H29 V17" stroke="#C6A566" stroke-width="1.6" fill="none"/></svg>
-            <h3>Speed to Completion</h3>
-            <p>Compressed timelines through parallel sourcing, staged logistics, and coordinated installation — projects stay on schedule and rooms return to revenue faster.</p>
-          </article>
-          <article class="adv reveal">
-            <svg viewBox="0 0 34 34" fill="none" aria-hidden="true"><path d="M17 3 L28 8 V16 C28 24 23 29 17 31 C11 29 6 24 6 16 V8 Z" stroke="#C6A566" stroke-width="1.5" fill="none"/><path d="M12.5 17 L16 20.5 L22 13.5" stroke="#EDE8DD" stroke-width="1.7" fill="none"/></svg>
-            <h3>Absolute Accountability</h3>
-            <p>One contract, one point of contact, one team answerable for the outcome — from first specification to final walkthrough.</p>
-          </article>
-        </div>
+      <div class="how-step">
+        <span class="k">Deliver</span>
+        <h3>Stand behind every site</h3>
+        <p>Central tracking, site-by-site sign-off, and one point of escalation from first shipment to final punch list — and after it.</p>
       </div>
-    </section>
+    </div>
+    <p class="how-foot">You never manage the network. You manage one relationship — and hold it accountable.</p>
+  </div>
+</section>
 
-    <!-- ========================================================== CONTACT -->
-    <section class="contact" id="contact">
-      <div class="wrap contact-grid">
-        <div class="contact-side reveal">
-          <p class="eyebrow">Request Consultation</p>
-          <h2>Tell us about your property.</h2>
-          <p>Share a few details about your project and a member of our team will respond within one business day with next steps — typically a scoping conversation and preliminary budget framework.</p>
-          <p class="direct">Prefer email? Reach us directly at <a href="#" id="contactEmail" rel="nofollow">loading…</a></p>
+<!-- ============ INDUSTRIES ============ -->
+<section class="sec-pad" id="industries">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Industries</span>
+      <h2>Built for operators with more than one address.</h2>
+    </div>
+    <div class="ind-list">
+      <div class="ind reveal"><h3>Hospitality &amp; resorts</h3><p>Openings, renovations, and recurring supply for hotels and resort properties.</p></div>
+      <div class="ind reveal"><h3>Workforce housing</h3><p>Turnkey furnishing and supply programs for data-center, energy, and project housing.</p></div>
+      <div class="ind reveal"><h3>National retail &amp; restaurant</h3><p>Rollouts, rebrands, and resets across dozens or hundreds of locations.</p></div>
+      <div class="ind reveal"><h3>Corporate &amp; multi-site facilities</h3><p>Standardized installation and supply programs across distributed portfolios.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INDEPENDENCE ============ -->
+<section class="indep sec-pad" id="independence">
+  <div class="wrap">
+    <span class="eyebrow">Why Ashenford</span>
+    <h2>Independent by design.</h2>
+    <p class="body">Ashenford is not a manufacturer's sales arm and not a broker passing your program down a chain. <strong>We contract in our own name, select fulfillment partners on merit, and answer only to your program.</strong> When a vendor is the right fit, they earn the work; when they aren't, they don't — and you never have to referee it.</p>
+    <p class="body">That independence is the product: one partner with the freedom to build the right team for every site, and the accountability to stand behind all of them.</p>
+    <p class="kicker">We don't sell you a catalog. We deliver you a finished site.</p>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="eyebrow">Start a program</span>
+      <h2>Tell us about your sites.</h2>
+      <p class="sub">One location or one hundred — a rough outline is enough to start. We'll come back with questions, not a brochure.</p>
+      <p class="direct">Prefer email? <a class="email-link" href="#">email us</a></p>
+    </div>
+    <div>
+      <!-- =============================================================
+           CONTACT FORM — Web3Forms (free, no server needed)
+           TODO: create a Web3Forms access key for the Ashenford domain
+           and paste it below, replacing the placeholder.
+           ============================================================= -->
+      <form id="contactForm" novalidate>
+        <input type="hidden" name="access_key" value="PASTE-YOUR-WEB3FORMS-ACCESS-KEY-HERE">
+        <input type="hidden" name="subject" value="New program inquiry — Ashenford International">
+        <input type="hidden" name="from_name" value="Ashenford International website">
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+
+        <div class="field-row">
+          <div class="field">
+            <label for="f-name">Name</label>
+            <input id="f-name" name="name" type="text" placeholder="Your name" required>
+          </div>
+          <div class="field">
+            <label for="f-company">Company</label>
+            <input id="f-company" name="company" type="text" placeholder="Brand or operator" required>
+          </div>
         </div>
-
-        <!-- ======================================================
-             WEB3FORMS CONTACT FORM
-             1. Replace YOUR_ACCESS_KEY_HERE with your Web3Forms key.
-             2. Recipient address is set in the Web3Forms dashboard.
-             3. The hidden "subject" field is an anti-bot honeypot —
-                it must stay empty and hidden. Do not remove.
-             ====================================================== -->
-        <form id="consultForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
-          <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-          <input type="hidden" name="from_name" value="Ashenford International Website">
-
-          <!-- Honeypot (hidden via CSS) -->
-          <div class="hp-field" aria-hidden="true">
-            <label for="subject">Subject</label>
-            <input type="text" name="subject" id="subject" tabindex="-1" autocomplete="off">
-          </div>
-
+        <div class="field">
+          <label for="f-email">Work email</label>
+          <input id="f-email" name="email" type="email" placeholder="you@company.com" required>
+        </div>
+        <div class="field-row">
           <div class="field">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Jordan Reeve" autocomplete="name" required>
-          </div>
-          <div class="field">
-            <label for="email">Corporate Email</label>
-            <input type="email" id="email" name="email" placeholder="j.reeve@company.com" autocomplete="email" required>
-          </div>
-          <div class="field">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" autocomplete="tel" required>
-          </div>
-          <div class="field">
-            <label for="company">Property / Company Name</label>
-            <input type="text" id="company" name="company" placeholder="Harborview Hotel Group" autocomplete="organization" required>
-          </div>
-
-          <div class="field">
-            <label for="projectType">Project Type</label>
-            <select id="projectType" name="project_type" required>
-              <option value="" disabled selected>Select project type</option>
-              <option>Hotel Renovation</option>
-              <option>New Construction</option>
-              <option>Extended-Stay / Workforce Housing Refresh</option>
-              <option>Corporate / Multi-family Development</option>
+            <label for="f-type">Project type</label>
+            <select id="f-type" name="project_type" required>
+              <option value="" disabled selected>Select one</option>
+              <option>New build / opening</option>
+              <option>Renovation or rebrand</option>
+              <option>Multi-site rollout</option>
+              <option>Ongoing supply program</option>
+              <option>Other</option>
             </select>
           </div>
           <div class="field">
-            <label for="primaryNeed">Primary Need</label>
-            <select id="primaryNeed" name="primary_need" required>
-              <option value="" disabled selected>Select primary need</option>
-              <option>Mattress &amp; Bedding Program</option>
-              <option>Complete Guest Room Turnkey Package</option>
-              <option>Public Spaces &amp; Lobby FF&amp;E</option>
-              <option>Logistics &amp; Installation Only</option>
+            <label for="f-need">Primary need</label>
+            <select id="f-need" name="primary_need" required>
+              <option value="" disabled selected>Select one</option>
+              <option>Freight &amp; shipping</option>
+              <option>Installation</option>
+              <option>Setup &amp; teardown</option>
+              <option>Housekeeping &amp; supply program</option>
+              <option>Full program</option>
             </select>
           </div>
+        </div>
+        <div class="field">
+          <label for="f-when">Timeline</label>
+          <select id="f-when" name="timeline" required>
+            <option value="" disabled selected>Select one</option>
+            <option>0–3 months</option>
+            <option>3–6 months</option>
+            <option>6–12 months</option>
+            <option>Planning ahead</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-msg">Your program</label>
+          <textarea id="f-msg" name="message" placeholder="Sites, scope, and anything else we should know." required></textarea>
+        </div>
+        <button class="btn" type="submit" id="submitBtn">Send inquiry</button>
+        <p class="privacy-note">We'll only use your details to reply to you — nothing else.</p>
+        <p id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
 
-          <div class="field full">
-            <label for="timeline">Timeline</label>
-            <select id="timeline" name="timeline" required>
-              <option value="" disabled selected>Select timeline</option>
-              <option>Immediate (&lt; 3 months)</option>
-              <option>Mid-term (3–6 months)</option>
-              <option>Planning Phase (6+ months)</option>
-            </select>
-          </div>
-
-          <div class="field full">
-            <label for="message">Project Details</label>
-            <textarea id="message" name="message" placeholder="Property size, room count, scope, budget range — whatever you can share." required></textarea>
-          </div>
-
-          <div class="form-foot">
-            <button type="submit" class="btn" id="submitBtn">Request Consultation</button>
-            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-          </div>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <!-- ========================================================== FOOTER -->
-  <footer>
-    <div class="wrap">
-      <div class="foot-grid">
-        <a class="foot-brand" href="#top" aria-label="Back to top">
-          <svg aria-hidden="true"><use href="#ai-mark"/></svg>
-          <span class="brand-name" style="font-size:1rem">Ashenford<small>International</small></span>
-        </a>
-        <ul class="foot-links">
-          <li><a href="#markets">Markets</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#advantage">Why Ashenford</a></li>
-          <li><a href="#contact">Request Consultation</a></li>
-        </ul>
-      </div>
-      <div class="foot-legal">
-        <p>© <span id="year">2026</span> Ashenford International. All rights reserved.</p>
-        <p><a href="#" rel="nofollow">Privacy Policy</a> &nbsp;·&nbsp; <a href="#" rel="nofollow">Terms of Service</a></p>
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <div class="foot-brand">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <rect x="21" y="21" width="58" height="58" transform="rotate(45 50 50)" fill="none" stroke="#C7A468" stroke-width="2.2"/>
+        <circle cx="50" cy="28" r="4.2" fill="none" stroke="#EDE8DE" stroke-width="3"/>
+        <path d="M 47.2 31.8 L 34 74 M 52.8 31.8 L 66 74 M 39.5 58 L 60.5 58" fill="none" stroke="#EDE8DE" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <div>
+        <div class="fname">Ashenford International</div>
+        <div class="ftag">Program services for national brands</div>
       </div>
     </div>
-  </footer>
+    <div class="foot-right">
+      <a class="email-link" href="#">email</a>
+      <span>© <span id="yr"></span> Ashenford International</span>
+    </div>
+  </div>
+</footer>
 
-  <script>
-    /* ---------- Footer year ---------- */
-    document.getElementById('year').textContent = new Date().getFullYear();
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
 
-    /* ---------- Mobile nav ---------- */
-    (function(){
-      var toggle = document.getElementById('navToggle');
-      var links  = document.getElementById('navLinks');
-      toggle.addEventListener('click', function(){
-        var open = links.classList.toggle('open');
-        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  // Email assembled at runtime to keep it away from scrapers.
+  // TODO: set the real mailbox + domain before launch.
+  var eUser = 'info', eDom = 'ashenfordinternational.com';
+  var EMAIL = eUser + '@' + eDom;
+  document.querySelectorAll('.email-link').forEach(function(a){
+    a.textContent = EMAIL;
+    a.href = 'mailto:' + EMAIL;
+  });
+
+  // Mobile menu
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', ()=>{
+    const open = mobileMenu.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  mobileMenu.querySelectorAll('a').forEach(a=>{
+    a.addEventListener('click', ()=>{ mobileMenu.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false'); });
+  });
+
+  // Scroll reveal
+  if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches){
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    },{threshold:.15});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
+  }
+
+  // Contact form -> Web3Forms
+  const form = document.getElementById('contactForm');
+  const statusEl = document.getElementById('formStatus');
+  const btn = document.getElementById('submitBtn');
+  const KEY_PLACEHOLDER = 'PASTE-YOUR-WEB3FORMS-ACCESS-KEY-HERE';
+
+  function setStatus(msg, kind){
+    statusEl.textContent = msg;
+    statusEl.className = 'show ' + kind;
+  }
+
+  form.addEventListener('submit', async (e)=>{
+    e.preventDefault();
+    if (!form.checkValidity()){ form.reportValidity(); return; }
+
+    const key = form.querySelector('[name=access_key]').value.trim();
+    if (key === KEY_PLACEHOLDER || key === ''){
+      setStatus('Form not connected yet — add your Web3Forms access key in index.html to start receiving messages.', 'err');
+      return;
+    }
+
+    btn.disabled = true;
+    const original = btn.textContent;
+    btn.textContent = 'Sending…';
+    const data = Object.fromEntries(new FormData(form).entries());
+    try{
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method:'POST',
+        headers:{'Content-Type':'application/json','Accept':'application/json'},
+        body: JSON.stringify(data)
       });
-      links.addEventListener('click', function(e){
-        if (e.target.tagName === 'A'){
-          links.classList.remove('open');
-          toggle.setAttribute('aria-expanded','false');
-        }
-      });
-    })();
-
-    /* ---------- Email obfuscation (split-variable) ----------
-       The address never appears whole in the page source, so
-       spam bots scraping HTML can't harvest it. To change the
-       address shown, edit eUser / eDom below.                */
-    (function(){
-      var eUser = 'info', eDom = 'ashenfordinternational.com';
-      var el = document.getElementById('contactEmail');
-      var addr = eUser + '@' + eDom;
-      el.textContent = addr;
-      el.setAttribute('href', 'mailto:' + addr);
-    })();
-
-    /* ---------- Scroll reveal ---------- */
-    (function(){
-      var items = document.querySelectorAll('.reveal');
-      if (!('IntersectionObserver' in window)){
-        items.forEach(function(el){ el.classList.add('in'); });
-        return;
+      const out = await res.json();
+      if (out.success){
+        form.reset();
+        setStatus('Thank you — your inquiry is on its way. We\'ll be in touch shortly.', 'ok');
+      } else {
+        setStatus('Something went wrong. Please email us directly at ' + EMAIL + '.', 'err');
       }
-      var io = new IntersectionObserver(function(entries){
-        entries.forEach(function(entry){
-          if (entry.isIntersecting){
-            entry.target.classList.add('in');
-            io.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12 });
-      items.forEach(function(el){ io.observe(el); });
-    })();
-
-    /* ---------- Web3Forms async submit ---------- */
-    (function(){
-      var form   = document.getElementById('consultForm');
-      var status = document.getElementById('formStatus');
-      var btn    = document.getElementById('submitBtn');
-
-      form.addEventListener('submit', function(e){
-        e.preventDefault();
-
-        /* native validation */
-        if (!form.checkValidity()){
-          form.reportValidity();
-          return;
-        }
-        /* honeypot: silently drop bot submissions */
-        if (form.subject.value !== ''){ return; }
-
-        btn.disabled = true;
-        status.textContent = 'Sending…';
-
-        fetch(form.action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: { 'Accept': 'application/json' }
-        })
-        .then(function(res){ return res.json(); })
-        .then(function(data){
-          if (data.success){
-            form.reset();
-            status.textContent = 'Received — we\u2019ll be in touch within one business day.';
-          } else {
-            status.textContent = 'Something went wrong. Email us directly and we\u2019ll take it from there.';
-          }
-        })
-        .catch(function(){
-          status.textContent = 'Connection issue. Email us directly and we\u2019ll take it from there.';
-        })
-        .finally(function(){ btn.disabled = false; });
-      });
-    })();
-  </script>
+    } catch(err){
+      setStatus('Network error. Please email us directly at ' + EMAIL + '.', 'err');
+    } finally {
+      btn.disabled = false;
+      btn.textContent = original;
+    }
+  });
+</script>
 </body>
 </html>
