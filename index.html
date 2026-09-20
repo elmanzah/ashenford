@@ -3,17 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ashenford International — Freight, Installation &amp; Site Services for National Brands</title>
-<meta name="description" content="Ashenford International is an independent program-services partner for national brands and multi-site operators — freight &amp; shipping, installation, setup &amp; teardown, and housekeeping supply programs, delivered under one contract through a vetted national fulfillment network.">
+<title>Ashenford International — Design, FF&amp;E &amp; Site Services for National Brands</title>
+<meta name="description" content="Ashenford International is an independent design-to-install partner for national brands and multi-site operators — design, FF&amp;E procurement, demolition, painting, freight &amp; shipping, installation, setup &amp; teardown, and housekeeping supply programs, delivered under one contract through a vetted national network.">
 <!-- TODO: set the real domain in the canonical + OG URLs below before launch -->
 <link rel="canonical" href="https://ashenfordinternational.com/">
 
-<meta property="og:title" content="Ashenford International — Program Services for National Brands">
-<meta property="og:description" content="Freight, installation, setup &amp; teardown, and housekeeping programs — every site, one accountable partner.">
+<meta property="og:title" content="Ashenford International — Design, FF&amp;E &amp; Site Services for National Brands">
+<meta property="og:description" content="Design, FF&amp;E procurement, demolition, painting, freight, and installation — every site, one accountable partner.">
 <meta property="og:url" content="https://ashenfordinternational.com/">
 <meta property="og:site_name" content="Ashenford International">
 <!-- TODO: create a 1200x630 social-card.png and place it next to this file -->
-<meta property="og:image" content="https://ashenfordinternational.com/social-card.png">
+<!-- ?v=2 makes LinkedIn/WhatsApp/Facebook fetch the new card instead of their cached copy; bump it on each card change -->
+<meta property="og:image" content="https://ashenfordinternational.com/social-card.png?v=2">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 
@@ -23,7 +24,8 @@
   "@type": "Organization",
   "name": "Ashenford International",
   "url": "https://ashenfordinternational.com/",
-  "description": "Independent program-services partner for national brands and multi-site operators: freight and shipping coordination, installation, setup and teardown, and hospitality and housekeeping supply programs.",
+  "description": "Independent design-to-install partner for national brands and multi-site operators: design and FF&E specification, FF&E procurement, interior demolition, painting, freight and shipping coordination, installation, setup and teardown, and hospitality and housekeeping supply programs.",
+  "knowsAbout": ["FF&E design and specification", "FF&E procurement", "Interior demolition", "Commercial painting", "Freight and shipping coordination", "FF&E installation", "Setup and teardown", "Housekeeping supply programs"],
   "areaServed": "United States",
   "email": "info@ashenfordinternational.com"
 }
@@ -74,7 +76,7 @@
     font-size:11.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;
     color:var(--champagne);
   }
-  h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.12;letter-spacing:.005em}
+  h1,h2,h3,h4{font-family:var(--display);font-weight:400;line-height:1.12;letter-spacing:.005em}
 
   .btn{
     display:inline-flex;align-items:center;gap:.6em;
@@ -107,7 +109,7 @@
   .nav-links{display:flex;align-items:center;gap:34px}
   .nav-links a{font-size:13.5px;font-weight:500;letter-spacing:.06em;color:var(--bone-dim);transition:color .16s ease}
   .nav-links a:hover{color:var(--champagne-bright)}
-  .nav-links .btn{padding:11px 20px;font-size:13px}
+  .nav-links .btn,.nav-links .btn:hover{padding:11px 20px;font-size:13px;color:#1A1610}
   .menu-btn{
     display:none;background:transparent;border:1px solid var(--slate);
     border-radius:2px;padding:9px 11px;cursor:pointer;line-height:0;
@@ -158,21 +160,37 @@
   section{scroll-margin-top:84px}
   .sec-pad{padding:104px 0}
   .sec-head{max-width:680px;margin-bottom:56px}
-  .sec-head h2{font-size:clamp(30px,4vw,46px);color:var(--bone);margin-top:18px}
+  .sec-head h2{font-size:clamp(30px,4vw,46px);color:var(--bone);margin-top:18px;text-wrap:balance}
   .sec-head.on-ivory h2{color:var(--ink)}
   .sec-head p.lede{margin-top:18px;font-size:16.5px;color:var(--bone-dim)}
 
+  /* services are grouped into two phases of the project, numbered in the order a job runs */
+  .phase{
+    display:flex;align-items:baseline;justify-content:space-between;gap:24px;
+    padding-bottom:16px;margin-bottom:26px;border-bottom:1px solid var(--slate);
+  }
+  .svc-grid + .phase{margin-top:76px}
+  .phase h3{font-size:25px;color:var(--bone)}
+  .phase p{font-size:14px;color:var(--bone-dim);text-align:right;max-width:520px;text-wrap:balance}
   .svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
   .svc{
     border:1px solid var(--slate);border-top:2px solid var(--champagne);
     background:var(--midnight);padding:38px 34px;
     transition:background .2s ease;
+    /* subgrid keeps headlines level across a row when one card's label wraps */
+    display:grid;grid-template-rows:subgrid;grid-row:span 2;row-gap:0;align-content:start;
   }
   .svc:hover{background:var(--midnight-2)}
-  .svc .fn{font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--champagne)}
-  .svc h3{font-size:26px;color:var(--bone);margin:14px 0 12px}
+  .svc .fn{font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--champagne);padding:4px 0}
+  .svc .fn .no{color:var(--bone-dim);margin-right:12px}
+  .svc h4{font-size:26px;color:var(--bone);margin:14px 0 12px;text-wrap:balance}
   .svc p{font-size:15px;color:var(--bone-dim)}
-  @media(max-width:760px){.svc-grid{grid-template-columns:1fr}}
+  @media(max-width:760px){
+    .svc-grid{grid-template-columns:1fr}
+    .phase{flex-direction:column;align-items:flex-start;gap:6px}
+    .phase p{text-align:left}
+    .svc-grid + .phase{margin-top:60px}
+  }
 
   /* ---------- HOW WE WORK (ivory) ---------- */
   .how{background:var(--ivory);color:var(--ink)}
@@ -274,7 +292,7 @@
       <a href="#services">Services</a>
       <a href="#how">How we work</a>
       <a href="#industries">Industries</a>
-      <a class="btn" href="#contact">Start a program</a>
+      <a class="btn" href="#contact">Start a project</a>
     </nav>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
@@ -284,7 +302,7 @@
     <a href="#services">Services</a>
     <a href="#how">How we work</a>
     <a href="#industries">Industries</a>
-    <a href="#contact">Start a program →</a>
+    <a href="#contact">Start a project →</a>
   </nav>
 </header>
 
@@ -293,9 +311,9 @@
   <div class="wrap">
     <span class="eyebrow">Independent program services — nationwide</span>
     <h1>Every site. One accountable <em>partner.</em></h1>
-    <p class="sub">Ashenford International manages freight, installation, setup &amp; teardown, and housekeeping supply programs for national brands and multi-site operators — one contract, one invoice, one team answerable for every location.</p>
+    <p class="sub">Ashenford International carries the whole project for national brands and multi-site operators, from design and FF&amp;E procurement through demolition, painting, delivery, and installation. One contract, one invoice, one team answerable for every location.</p>
     <div class="hero-cta">
-      <a class="btn" href="#contact">Start a program</a>
+      <a class="btn" href="#contact">Start a project</a>
       <a class="btn btn-ghost" href="#services">See services</a>
     </div>
   </div>
@@ -306,15 +324,15 @@
     <span class="stop fill" style="left:86%"></span>
   </div>
   <div class="route-labels" aria-hidden="true">
-    <span>Sourced</span><span>Shipped</span><span>Installed</span><span>Standing behind it</span>
+    <span>Designed</span><span>Sourced</span><span>Installed</span><span>Standing behind it</span>
   </div>
 </section>
 
 <!-- ============ VALUE STRIP ============ -->
 <div class="values">
   <div class="wrap">
-    <div class="val"><h3>One contract, one invoice</h3><p>You contract with Ashenford. We carry the program from purchase order to punch list.</p></div>
-    <div class="val"><h3>A vetted fulfillment network</h3><p>Insured, qualified fulfillment partners selected on merit for each program and region.</p></div>
+    <div class="val"><h3>One contract, one invoice</h3><p>You contract with Ashenford. We carry the project from design through closeout.</p></div>
+    <div class="val"><h3>A vetted fulfillment network</h3><p>Insured, qualified trade and fulfillment partners selected on merit for each program and region.</p></div>
     <div class="val"><h3>Program governance on every site</h3><p>Schedules, sign-offs, and site readiness managed centrally — so twenty locations run like one.</p></div>
   </div>
 </div>
@@ -324,29 +342,77 @@
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">Services</span>
-      <h2>Four service lines. One standard of delivery.</h2>
-      <p class="lede">Engage one line for a single site, or all four across a national rollout — delivered through our fulfillment network under Ashenford's program management, with Ashenford accountable for the result.</p>
+      <h2>From first sketch to final punch list.</h2>
+      <p class="lede">Engage one service for a single site, or all eight across a national rollout — delivered through our network under Ashenford's program management, with Ashenford accountable for the result.</p>
+    </div>
+
+    <div class="phase">
+      <h3>Plan &amp; prepare</h3>
+      <p>What the space becomes, what goes in it, and a site ready for it.</p>
     </div>
     <div class="svc-grid">
       <div class="svc reveal">
-        <span class="fn">Freight &amp; Shipping</span>
-        <h3>Move it to every site, on schedule</h3>
-        <p>Carrier coordination, consolidation, receiving and warehousing, and last-mile delivery to each location — with tracking rolled up across the whole program, not scattered across twenty inboxes.</p>
+        <span class="fn"><span class="no">01</span>Design</span>
+        <div class="svc-body">
+          <h4>Designed to be built, on budget</h4>
+          <p>Space planning, finish selection, and FF&amp;E specification for guest rooms, common areas, and housing units — drawn against real products, lead times, and brand standards, so the design you approve is the one that gets built.</p>
+        </div>
       </div>
       <div class="svc reveal">
-        <span class="fn">Installation</span>
-        <h3>Crews that finish the job</h3>
-        <p>Furniture, fixture, and equipment installation with site supervision, protection of finished spaces, and punch-list closeout — signed off site by site.</p>
+        <span class="fn"><span class="no">02</span>FF&amp;E Procurement</span>
+        <div class="svc-body">
+          <h4>Every piece sourced, priced, and tracked</h4>
+          <p>Contract-grade furniture, fixtures, and equipment sourced across manufacturers, priced against your budget, then purchased, expedited, and tracked in one place until it reaches your site.</p>
+        </div>
       </div>
       <div class="svc reveal">
-        <span class="fn">Setup &amp; Teardown</span>
-        <h3>Openings, rebrands, and resets</h3>
-        <p>New-location openings, renovation turnovers, rebrand rollouts, and seasonal resets — staged and crewed around your operating hours so business doesn't stop while the building changes.</p>
+        <span class="fn"><span class="no">03</span>Demolition</span>
+        <div class="svc-body">
+          <h4>Clear the space, protect the rest</h4>
+          <p>Interior and selective demolition — removal of existing furniture, fixtures, and finishes, with debris haul-off and disposal — sequenced so occupied floors stay open and protected.</p>
+        </div>
       </div>
       <div class="svc reveal">
-        <span class="fn">Hospitality &amp; Housekeeping Programs</span>
-        <h3>Recurring supply, without the chase</h3>
-        <p>Ongoing housekeeping and operating-supply programs for hotels, resorts, and workforce housing — standardized, replenished, and delivered so every property opens every day fully stocked.</p>
+        <span class="fn"><span class="no">04</span>Painting</span>
+        <div class="svc-body">
+          <h4>Walls ready before the furniture arrives</h4>
+          <p>Surface prep, patching, and finish coats for guest rooms, corridors, common areas, and back-of-house — scheduled in room blocks around occupancy and sequenced ahead of installation.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase">
+      <h3>Deliver &amp; sustain</h3>
+      <p>Getting it there, putting it in place, and keeping it stocked.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc reveal">
+        <span class="fn"><span class="no">05</span>Freight &amp; Shipping</span>
+        <div class="svc-body">
+          <h4>Move it to every site, on schedule</h4>
+          <p>Carrier coordination, consolidation, receiving and warehousing, and last-mile delivery to each location — with tracking rolled up across the whole program, not scattered across twenty inboxes.</p>
+        </div>
+      </div>
+      <div class="svc reveal">
+        <span class="fn"><span class="no">06</span>Installation</span>
+        <div class="svc-body">
+          <h4>Crews that finish the job</h4>
+          <p>Furniture, fixture, and equipment installation with site supervision, protection of finished spaces, and punch-list closeout — signed off site by site.</p>
+        </div>
+      </div>
+      <div class="svc reveal">
+        <span class="fn"><span class="no">07</span>Setup &amp; Teardown</span>
+        <div class="svc-body">
+          <h4>Openings, rebrands, and resets</h4>
+          <p>New-location openings, renovation turnovers, rebrand rollouts, and seasonal resets — staged and crewed around your operating hours so business doesn't stop while the building changes.</p>
+        </div>
+      </div>
+      <div class="svc reveal">
+        <span class="fn"><span class="no">08</span>Hospitality &amp; Housekeeping Programs</span>
+        <div class="svc-body">
+          <h4>Recurring supply, without the chase</h4>
+          <p>Ongoing housekeeping and operating-supply programs for hotels, resorts, and workforce housing — standardized, replenished, and delivered so every property opens every day fully stocked.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -368,7 +434,7 @@
       <div class="how-step">
         <span class="k">Scope</span>
         <h3>Define the program</h3>
-        <p>Sites, scope, schedule, and budget — captured in one program plan with clear sign-offs before anything ships.</p>
+        <p>Sites, design intent, scope, schedule, and budget — captured in one program plan with clear sign-offs before the first order is placed or the first wall comes down.</p>
       </div>
       <div class="how-step">
         <span class="k">Mobilize</span>
@@ -378,7 +444,7 @@
       <div class="how-step">
         <span class="k">Deliver</span>
         <h3>Stand behind every site</h3>
-        <p>Central tracking, site-by-site sign-off, and one point of escalation from first shipment to final punch list — and after it.</p>
+        <p>Central tracking, site-by-site sign-off, and one point of escalation from the first day on site to the final punch list — and after it.</p>
       </div>
     </div>
     <p class="how-foot">You never manage the network. You manage one relationship — and hold it accountable.</p>
@@ -393,7 +459,7 @@
       <h2>Built for operators with more than one address.</h2>
     </div>
     <div class="ind-list">
-      <div class="ind reveal"><h3>Hospitality &amp; resorts</h3><p>Openings, renovations, and recurring supply for hotels and resort properties.</p></div>
+      <div class="ind reveal"><h3>Hospitality &amp; resorts</h3><p>Design, renovations, openings, and recurring supply for hotels and resort properties.</p></div>
       <div class="ind reveal"><h3>Workforce housing</h3><p>Turnkey furnishing and supply programs for data-center, energy, and project housing.</p></div>
       <div class="ind reveal"><h3>National retail &amp; restaurant</h3><p>Rollouts, rebrands, and resets across dozens or hundreds of locations.</p></div>
       <div class="ind reveal"><h3>Corporate &amp; multi-site facilities</h3><p>Standardized installation and supply programs across distributed portfolios.</p></div>
@@ -416,8 +482,8 @@
 <section class="contact" id="contact">
   <div class="wrap contact-grid">
     <div>
-      <span class="eyebrow">Start a program</span>
-      <h2>Tell us about your sites.</h2>
+      <span class="eyebrow">Start a project</span>
+      <h2>How can we help you?</h2>
       <p class="sub">One location or one hundred — a rough outline is enough to start. We'll come back with questions, not a brochure.</p>
       <p class="direct">Prefer email? <a class="email-link" href="#">email us</a></p>
     </div>
@@ -429,7 +495,7 @@
            ============================================================= -->
       <form id="contactForm" novalidate>
         <input type="hidden" name="access_key" value="1455a76e-7452-4c31-a684-800d0b02b61f">
-        <input type="hidden" name="subject" value="New program inquiry — Ashenford International">
+        <input type="hidden" name="subject" value="New project inquiry — Ashenford International">
         <input type="hidden" name="from_name" value="Ashenford International website">
         <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
 
@@ -463,11 +529,15 @@
             <label for="f-need">Primary need</label>
             <select id="f-need" name="primary_need" required>
               <option value="" disabled selected>Select one</option>
+              <option>Design</option>
+              <option>FF&amp;E procurement</option>
+              <option>Demolition</option>
+              <option>Painting</option>
               <option>Freight &amp; shipping</option>
               <option>Installation</option>
               <option>Setup &amp; teardown</option>
               <option>Housekeeping &amp; supply program</option>
-              <option>Full program</option>
+              <option>Full project (design to install)</option>
             </select>
           </div>
         </div>
@@ -482,7 +552,7 @@
           </select>
         </div>
         <div class="field">
-          <label for="f-msg">Your program</label>
+          <label for="f-msg">Your project</label>
           <textarea id="f-msg" name="message" placeholder="Sites, scope, and anything else we should know." required></textarea>
         </div>
         <button class="btn" type="submit" id="submitBtn">Send inquiry</button>
@@ -504,7 +574,7 @@
       </svg>
       <div>
         <div class="fname">Ashenford International</div>
-        <div class="ftag">Program services for national brands</div>
+        <div class="ftag">Design-to-install program services for national brands</div>
       </div>
     </div>
     <div class="foot-right">
